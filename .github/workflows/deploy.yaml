@@ -31,6 +31,10 @@ jobs:
       run: |
         echo "$DOMAIN" > ./public/CNAME
 
+    - name: Disable Jekyll
+      run: |
+        touch ./public/.nojekyll
+
     - name: Login to GitHub
       run: |
         git remote set-url origin "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
