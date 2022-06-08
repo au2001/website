@@ -5,7 +5,7 @@ on:
     branches: main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -22,8 +22,8 @@ jobs:
 
     - name: Build project
       run: |
-        gatsby build
+        ./node_modules/.bin/gatsby build
 
     - name: Push to gh-pages
       run: |
-        gh-pages -d public
+        ./node_modules/.bin/gh-pages -d public
