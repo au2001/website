@@ -31,8 +31,12 @@ jobs:
       run: |
         echo "$DOMAIN" > ./public/CNAME
 
+    - name: Login to GitHub
+      run: |
+        git remote set-url origin "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     - name: Push to gh-pages
       run: |
         ./node_modules/.bin/gh-pages -d public -u "github-actions <41898282+github-actions@users.noreply.github.com>"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
