@@ -1,36 +1,14 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
-// styles
-const pageStyles = {
-  color: "#232129",
-  padding: "96px",
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
-}
-const headingStyles = {
-  marginTop: 0,
-  marginBottom: 64,
-  maxWidth: 320,
-}
+import * as styles from "./404.module.scss"
 
-const paragraphStyles = {
-  marginBottom: 48,
-}
-const codeStyles = {
-  color: "#8A6534",
-  padding: 4,
-  backgroundColor: "#FFF4DB",
-  fontSize: "1.25rem",
-  borderRadius: 4,
-}
-
-// markup
-const NotFoundPage = () => {
+export default function NotFoundPage() {
   return (
-    <main style={pageStyles}>
+    <main className={styles.page}>
       <title>Not found</title>
-      <h1 style={headingStyles}>Page not found</h1>
-      <p style={paragraphStyles}>
+      <h1 className={styles.heading}>Page not found</h1>
+      <p className={styles.paragraph}>
         Sorry{" "}
         <span role="img" aria-label="Pensive emoji">
           😔
@@ -40,7 +18,7 @@ const NotFoundPage = () => {
         {process.env.NODE_ENV === "development" ? (
           <>
             <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            Try creating a page in <code className={styles.code}>src/pages/</code>.
             <br />
           </>
         ) : null}
@@ -50,5 +28,3 @@ const NotFoundPage = () => {
     </main>
   )
 }
-
-export default NotFoundPage

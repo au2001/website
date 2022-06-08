@@ -6,7 +6,8 @@ const config: GatsbyConfig = {
     siteUrl: "https://arl.sh"
   },
   graphqlTypegen: true,
-  plugins: ["gatsby-plugin-sass", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
+  trailingSlash: "never",
+  plugins: ["gatsby-plugin-sass", "gatsby-plugin-dts-css-modules", "gatsby-plugin-image", "gatsby-plugin-sitemap", {
     resolve: "gatsby-plugin-manifest",
     options: {
       "icon": "src/images/icon.png"
