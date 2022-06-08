@@ -4,6 +4,9 @@ on:
   push:
     branches: main
 
+env:
+  DOMAIN: arl.sh
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -23,6 +26,10 @@ jobs:
     - name: Build project
       run: |
         ./node_modules/.bin/gatsby build
+
+    - name: Define custom domain
+      run: |
+        echo "$DOMAIN" > ./public/CNAME
 
     - name: Push to gh-pages
       run: |
