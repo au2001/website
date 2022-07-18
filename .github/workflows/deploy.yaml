@@ -5,7 +5,7 @@ on:
     branches: main
 
 env:
-  DOMAIN: arl.sh
+  DOMAIN: aurelien.garnier.dev
 
 jobs:
   deploy:

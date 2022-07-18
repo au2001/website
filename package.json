@@ -1,9 +1,9 @@
 {
-  "name": "arl.sh",
+  "name": "aurelien.garnier.dev",
   "version": "1.0.0",
   "private": true,
-  "description": "arl.sh",
-  "author": "Aurélien Garnier <me@arl.sh>",
+  "description": "aurelien.garnier.dev",
+  "author": "Aurélien Garnier <aurelien@garnier.dev>",
   "keywords": [
     "gatsby"
   ],

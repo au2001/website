@@ -2,8 +2,8 @@ import type { GatsbyConfig } from "gatsby"
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: "arl.sh",
-    siteUrl: "https://arl.sh"
+    title: "aurelien.garnier.dev",
+    siteUrl: "https://aurelien.garnier.dev"
   },
   graphqlTypegen: true,
   trailingSlash: "never",
