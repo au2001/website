@@ -1,5 +1,27 @@
 @import "_main.module";
 
+.error {
+  display: flex;
+  min-height: 100vh;
+  padding: 100px;
+  box-sizing: border-box;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  color: $SECONDARY;
+}
+
 .paragraph {
-  margin-bottom: 48px;
+  margin: 0;
+
+  a {
+    color: $SECONDARY;
+  }
 }

@@ -1,11 +1,14 @@
-.page {
-  color: #232129;
-  padding: 96px;
-  font-family: -apple-system, Roboto, sans-serif, serif;
-}
+@import "_fonts.module";
 
-.heading {
-  margin-top: 0;
-  margin-bottom: 64px;
-  max-width: 320px;
+$PRIMARY: #CDE7F6;
+$SECONDARY: #F9D0CD;
+$BACKGROUND: #003049;
+$HIGHLIGHT: #FFFFFF;
+
+body {
+  margin: 0;
+  background-color: $BACKGROUND;
+
+  color: $PRIMARY;
+  font-family: Inter, -apple-system, Roboto, sans-serif, serif;
 }

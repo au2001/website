@@ -1,5 +1,113 @@
 @import "_main.module";
 
-.headingAccent {
-  color: #663399;
+.heading {
+  width: max-content;
+  margin: 150px auto 0 auto;
+
+  > .preHeading {
+    font-weight: normal;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  > .mainHeading {
+    color: $SECONDARY;
+    font-weight: bold;
+    font-size: 48px;
+    margin: 10px 0 0 0;
+  }
+
+  > .subHeading {
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0;
+  }
+}
+
+.timeline {
+  position: relative;
+  width: max-content;
+  margin: 30px auto 0 auto;
+  border-collapse: collapse;
+
+  th {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: normal;
+
+    &.legend {
+      min-width: 100px;
+      text-align: left;
+
+      span {
+        margin-left: -16px;
+      }
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        margin-left: -2px;
+        height: calc(100% - 25px);
+        top: 25px;
+        border-right: 1px dashed $PRIMARY;
+
+        opacity: 0.5;
+      }
+    }
+
+    &.spacing {
+      width: 16px;
+    }
+  }
+
+  td {
+    line-height: 16px;
+
+    h2, h3 {
+      font-size: 16px;
+      font-weight: normal;
+
+      margin: 0;
+    }
+
+    h2 {
+      white-space: nowrap;
+      margin-right: 5px;
+    }
+
+    h3, span {
+      color: $SECONDARY;
+    }
+
+    h3 {
+      margin-right: 10px;
+    }
+
+    &.timeline {
+      position: relative;
+
+      div {
+        position: absolute;
+        top: 6px;
+        height: 8px;
+        background-color: $SECONDARY;
+        border-radius: 3px;
+
+        &.active {
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+        }
+
+        &.activeCap {
+          border-radius: 0;
+          background: linear-gradient(to right, $SECONDARY, transparent);
+        }
+      }
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
 }
