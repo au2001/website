@@ -5,12 +5,12 @@
 			{
 				"from": "2011-09-01",
 				"to": "2012-12-31",
-				"hoursPerDay": 3
+				"hoursPerDay": 2
 			},
 			{
 				"from": "2013-06-01",
 				"to": "2020-03-01",
-				"hoursPerDay": 4
+				"hoursPerDay": 3
 			}
 		]
 	},
@@ -20,12 +20,12 @@
 			{
 				"from": "2013-09-01",
 				"to": "2018-12-31",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.5
 			},
 			{
 				"from": "2019-11-01",
 				"to": "now",
-				"hoursPerDay": 3
+				"hoursPerDay": 2
 			}
 		]
 	},
@@ -35,7 +35,7 @@
 			{
 				"from": "2021-09-01",
 				"to": "now",
-				"hoursPerDay": 2
+				"hoursPerDay": 2.5
 			}
 		]
 	},
@@ -45,7 +45,7 @@
 			{
 				"from": "2014-06-01",
 				"to": "2017-12-31",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.2
 			},
 			{
 				"from": "2018-09-01",
@@ -65,12 +65,12 @@
 			{
 				"from": "2016-06-01",
 				"to": "2017-12-31",
-				"hoursPerDay": 0.5
+				"hoursPerDay": 0.2
 			},
 			{
 				"from": "2019-11-01",
 				"to": "2021-05-31",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.5
 			}
 		]
 	},
@@ -80,12 +80,12 @@
 			{
 				"from": "2013-09-01",
 				"to": "2018-12-31",
-				"hoursPerDay": 0.5
+				"hoursPerDay": 0.2
 			},
 			{
 				"from": "2019-11-01",
 				"to": "now",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.5
 			}
 		]
 	},
@@ -95,7 +95,7 @@
 			{
 				"from": "2019-11-01",
 				"to": "now",
-				"hoursPerDay": 2
+				"hoursPerDay": 1
 			}
 		]
 	},
@@ -104,8 +104,13 @@
 		"timeline": [
 			{
 				"from": "2016-06-01",
+				"to": "2018-12-31",
+				"hoursPerDay": 0.2
+			},
+			{
+				"from": "2019-01-01",
 				"to": "now",
-				"hoursPerDay": 2
+				"hoursPerDay": 1.5
 			}
 		]
 	},
@@ -115,7 +120,7 @@
 			{
 				"from": "2018-09-01",
 				"to": "now",
-				"hoursPerDay": 1.5
+				"hoursPerDay": 0.5
 			}
 		]
 	},
@@ -125,7 +130,7 @@
 			{
 				"from": "2018-09-01",
 				"to": "now",
-				"hoursPerDay": 1.5
+				"hoursPerDay": 0.8
 			}
 		]
 	},
@@ -135,7 +140,7 @@
 			{
 				"from": "2013-06-01",
 				"to": "now",
-				"hoursPerDay": 2
+				"hoursPerDay": 1
 			}
 		]
 	},
@@ -145,12 +150,12 @@
 			{
 				"from": "2013-09-01",
 				"to": "2018-12-31",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.2
 			},
 			{
 				"from": "2019-11-01",
 				"to": "now",
-				"hoursPerDay": 2
+				"hoursPerDay": 0.5
 			}
 		]
 	},
@@ -160,7 +165,7 @@
 			{
 				"from": "2012-09-01",
 				"to": "now",
-				"hoursPerDay": 4
+				"hoursPerDay": 2
 			}
 		]
 	},
@@ -170,7 +175,7 @@
 			{
 				"from": "2012-11-01",
 				"to": "now",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.2
 			}
 		]
 	},
@@ -180,7 +185,7 @@
 			{
 				"from": "2012-11-01",
 				"to": "now",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.2
 			}
 		]
 	},
@@ -190,7 +195,7 @@
 			{
 				"from": "2012-11-01",
 				"to": "now",
-				"hoursPerDay": 0.2
+				"hoursPerDay": 0.1
 			}
 		]
 	},
@@ -200,7 +205,7 @@
 			{
 				"from": "2014-06-01",
 				"to": "2017-12-31",
-				"hoursPerDay": 0.8
+				"hoursPerDay": 0.5
 			}
 		]
 	},
@@ -210,7 +215,7 @@
 			{
 				"from": "2012-09-01",
 				"to": "2018-12-31",
-				"hoursPerDay": 4
+				"hoursPerDay": 2.5
 			}
 		]
 	},
@@ -220,7 +225,7 @@
 			{
 				"from": "2017-06-01",
 				"to": "now",
-				"hoursPerDay": 1
+				"hoursPerDay": 0.5
 			}
 		]
 	},
@@ -230,7 +235,7 @@
 			{
 				"from": "2017-06-01",
 				"to": "2021-12-31",
-				"hoursPerDay": 0.2
+				"hoursPerDay": 0.1
 			}
 		]
 	},
@@ -240,7 +245,7 @@
 			{
 				"from": "2015-12-01",
 				"to": "now",
-				"hoursPerDay": 0.8
+				"hoursPerDay": 0.2
 			}
 		]
 	},
@@ -260,7 +265,7 @@
 			{
 				"from": "2022-01-01",
 				"to": "now",
-				"hoursPerDay": 0.5
+				"hoursPerDay": 0.2
 			}
 		]
 	},
