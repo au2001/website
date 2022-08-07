@@ -1,28 +1,4 @@
-@import "_main.module";
-
-.heading {
-  width: max-content;
-  margin: 150px auto 0 auto;
-
-  > .preHeading {
-    font-weight: normal;
-    font-size: 24px;
-    margin: 0;
-  }
-
-  > .mainHeading {
-    color: $SECONDARY;
-    font-weight: bold;
-    font-size: 48px;
-    margin: 10px 0 0 0;
-  }
-
-  > .subHeading {
-    font-weight: normal;
-    font-size: 16px;
-    margin: 0;
-  }
-}
+@import "/src/styles/_main.module";
 
 .timeline {
   position: relative;

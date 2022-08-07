@@ -1,0 +1,47 @@
+@import "/src/styles/_main.module";
+
+.heading {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.interview {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 640px;
+  margin: 0 auto;
+  align-items: stretch;
+
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    margin-top: 50px;
+
+    > h2 {
+      color: $SECONDARY;
+
+      font-size: 18px;
+      font-weight: normal;
+
+      margin: 0;
+    }
+
+    > p {
+      margin: 16px 0 0 50px;
+
+      a {
+        color: inherit;
+      }
+
+      sub {
+        opacity: 0.2;
+      }
+    }
+  }
+}

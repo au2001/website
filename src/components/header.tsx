@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import * as styles from "/src/styles/components/header.module.scss"
+import * as styles from "./header.module.scss"
 
 export default function Header() {
   return (
