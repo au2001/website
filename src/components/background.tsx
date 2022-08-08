@@ -4,9 +4,10 @@ import { Random, MersenneTwister19937, createEntropy } from "random-js"
 import * as styles from "./background.module.scss"
 
 export default function Background() {
-  const [width, setWidth] = React.useState(document.body.offsetWidth)
-  const [height, setHeight] = React.useState(document.body.offsetHeight)
-  const square = React.useMemo(() => width / Math.floor(width / 80), [width, height])
+  const [ready, setReady] = React.useState(false)
+  const [width, setWidth] = React.useState(0)
+  const [height, setHeight] = React.useState(0)
+  const square = React.useMemo(() => width / Math.max(Math.floor(width / 80), 1), [width, height])
 
   const entropy = React.useMemo(() => createEntropy(), [])
   const rngs = React.useMemo(() => {
@@ -97,10 +98,15 @@ export default function Background() {
     window.addEventListener("resize", refresh, { passive: true })
     refresh()
 
+    setReady(true)
+
     return () => {
       window.removeEventListener("resize", refresh)
     }
   }, [])
+
+  if (!ready)
+    return null
 
   return (
     <svg className={styles.background} viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg">
