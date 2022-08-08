@@ -5,6 +5,7 @@ import Timeline from "/src/components/index/timeline.tsx"
 import Clients from "/src/components/index/clients.tsx"
 import Interview from "/src/components/index/interview.tsx"
 import Footer from "/src/components/footer.tsx"
+import Background from "/src/components/background.tsx"
 
 import * as styles from "./index.module.scss"
 
@@ -12,6 +13,8 @@ export default function IndexPage() {
   return (
     <>
       <title>Aurélien Garnier</title>
+
+      <Background />
 
       <div className={styles.fold}>
         <div className={styles.heading}>

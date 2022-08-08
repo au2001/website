@@ -2,10 +2,12 @@
 
 .footer {
 	width: 90%;
-	margin: 0 auto 50px auto;
+	margin: 0 auto;
+
+  overflow: auto;
 
 	> p {
-		margin: 50px 0 0 0;
+		margin: 50px 0;
 		text-align: center;
 
 		font-size: 12px;
