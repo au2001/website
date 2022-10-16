@@ -108,12 +108,7 @@ export default function Timeline() {
         </td>
 
         <td key={`${key}-mobile`} colSpan={years.length} className={styles.timelineMobile}>
-          {new Date(Math.min(...timeline.map(({ from }) => from.getTime()))).getFullYear()}
-          {" - "}
-          {timeline.some(({ active }) => active)
-            ? "now"
-            : new Date(Math.max(...timeline.map(({ from }) => from.getTime()))).getFullYear()
-          }
+          &ndash;
         </td>
       </>
     )
