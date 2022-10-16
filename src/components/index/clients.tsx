@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import clientsData from "/src/data/clients.tsx"
+import clientsData from "../../data/clients"
 
 import * as styles from "./clients.module.scss"
 

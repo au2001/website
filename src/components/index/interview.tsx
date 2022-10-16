@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import interviewData from "/src/data/interview.tsx"
+import interviewData from "../../data/interview"
 
 import * as styles from "./interview.module.scss"
 

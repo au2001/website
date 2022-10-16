@@ -3,45 +3,46 @@
 .timeline {
   position: relative;
   width: max-content;
-  margin: 30px auto 0 auto;
+  margin: 1.875em auto 0 auto;
   border-collapse: collapse;
 
   th {
-    line-height: 20px;
-    font-size: 16px;
+    line-height: 1.25em;
+    font-size: 1em;
     font-weight: normal;
 
     &.legend {
-      min-width: 100px;
+      min-width: 6.25em;
       text-align: left;
 
       span {
-        margin-left: -16px;
+        margin-left: -1em;
       }
 
       &::before {
         content: "";
 
         position: absolute;
-        margin-left: -2px;
-        height: calc(100% - 25px);
-        top: 25px;
-        border-right: 1px dashed $PRIMARY;
+        margin-left: -0.125em;
+        height: calc(100% - 1.5625em);
+        top: 1.5625em;
+        border-right: 0.0625em dashed $PRIMARY;
 
         opacity: 0.5;
       }
     }
 
-    &.spacing {
-      width: 16px;
+    @include mobile {
+      display: none;
     }
   }
 
   td {
-    line-height: 16px;
+    line-height: 1em;
 
-    h2, h3 {
-      font-size: 16px;
+    h2,
+    h3 {
+      font-size: 1em;
       font-weight: normal;
 
       margin: 0;
@@ -49,26 +50,27 @@
 
     h2 {
       white-space: nowrap;
-      margin-right: 5px;
+      margin-right: 0.3125em;
     }
 
-    h3, span {
+    h3,
+    span {
       color: $SECONDARY;
     }
 
     h3 {
-      margin-right: 10px;
+      margin-right: 0.625em;
     }
 
-    &.timeline {
+    &.timelineDesktop {
       position: relative;
 
       div {
         position: absolute;
-        top: 6px;
-        height: 8px;
+        top: 0.375em;
+        height: 0.5em;
         background-color: $SECONDARY;
-        border-radius: 3px;
+        border-radius: 0.1875em;
 
         &.active {
           border-top-right-radius: 0;

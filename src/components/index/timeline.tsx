@@ -1,13 +1,13 @@
 import * as React from "react"
 
-import timelineData from "/src/data/timeline.tsx"
+import timelineData from "../../data/timeline"
 
 import * as styles from "./timeline.module.scss"
 
 export default function Timeline() {
   const now = React.useMemo(() => new Date(), [])
 
-  function getDate(date, now=new Date()) {
+  function getDate(date: string, now = new Date()) {
     if (date === "now")
       return now
     return new Date(date)
@@ -22,7 +22,7 @@ export default function Timeline() {
     }))
 
     const hours = Math.round(timeline.map(({ from, to, hoursPerDay }) =>
-      (to - from) / (24 * 60 * 60 * 1000) * hoursPerDay
+      (to.getTime() - from.getTime()) / (24 * 60 * 60 * 1000) * hoursPerDay
     ).reduce((a, b) => a + b))
     const roundedHours = hours - hours % Math.pow(10, Math.floor(Math.log10(hours)))
 
@@ -48,17 +48,17 @@ export default function Timeline() {
     return [minYear, (minYear + maxYear) / 2, maxYear]
   }, [timelineItems, now])
 
-  function getDateOffset(date) {
+  function getDateOffset(date: Date) {
     const min = new Date(years[0], 0, 1)
     const max = new Date(years[years.length - 1] + years[1] - years[0], 0, 0)
-    return (date - min) / (max - min)
+    return (date.getTime() - min.getTime()) / (max.getTime() - min.getTime())
   }
 
-  function formatDate(date) {
+  function formatDate(date: Date) {
     return date.toLocaleString("en-US", { dateStyle: "medium" })
   }
 
-  function getTimeline(timeline, key) {
+  function getTimeline(timeline: any[], key: string) {
     const activeOffset = getDateOffset(now)
     const activeKeyframes = `timeline-appear-${key}-active`
 
@@ -108,7 +108,7 @@ export default function Timeline() {
     )
   }
 
-  function getTableData(item) {
+  function getTableData(item: any) {
     return (
       <>
         <td>
@@ -127,7 +127,7 @@ export default function Timeline() {
     )
   }
 
-  const tableData = React.useMemo(() => timelineItems.map(item => ({
+  const tableData = React.useMemo<{ item: any, td: JSX.Element }[]>(() => timelineItems.map(item => ({
     item,
     td: getTableData(item)
   })), [timelineItems, years, now])

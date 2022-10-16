@@ -3,7 +3,7 @@
 .error {
   display: flex;
   min-height: 100vh;
-  padding: 100px;
+  padding: 6.25em;
   box-sizing: border-box;
 
   flex-direction: column;
@@ -13,7 +13,7 @@
 
 .heading {
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.25em;
 
   color: $SECONDARY;
 }

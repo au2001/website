@@ -1,13 +1,13 @@
 import * as React from "react"
 
-import socialsData from "/src/data/socials.tsx"
+import socialsData from "../data/socials"
 
 import * as styles from "./footer.module.scss"
 
-export default function Footer({ contact }: { contact?: bool }) {
+export default function Footer({ contact }: { contact?: boolean }) {
   const year = React.useMemo(() => new Date().getFullYear(), [])
 
-  function onAccountClick(social) {
+  function onAccountClick(social: any) {
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(social.account);
     } else {
@@ -23,7 +23,7 @@ export default function Footer({ contact }: { contact?: bool }) {
     alert(`My ${social.name} account is:\n${social.prefix || ""}${social.account}\n\nIt has been copied to your clipboard.`)
   }
 
-  function getSocialIcon(social) {
+  function getSocialIcon(social: any) {
     const img = (
       <img src={social.logo} alt={social.name} title={`${social.name}: ${social.prefix || ""}${social.account}`} />
     )

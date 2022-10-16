@@ -3,6 +3,9 @@ import { Random, MersenneTwister19937, createEntropy } from "random-js"
 
 import * as styles from "./background.module.scss"
 
+type Line = { from: Dot, to: Dot, ratio: number };
+type Dot = { x: number, y: number, size: number, lines: Line[] };
+
 export default function Background() {
   const [ready, setReady] = React.useState(false)
   const [width, setWidth] = React.useState(0)
@@ -21,7 +24,7 @@ export default function Background() {
   }, [height, square, entropy])
 
   const dots = React.useMemo(() => {
-    const dots = []
+    const dots: Dot[] = []
 
     let i = 0
     for (let y = -square / 2; y < height + square; y += square) {
@@ -41,7 +44,7 @@ export default function Background() {
   }, [width, height, square, rngs])
 
   const lines = React.useMemo(() => {
-    const lines = []
+    const lines: Line[] = []
 
     for (let j = 1; j < dots.length; ++j) {
       const to = dots[j]

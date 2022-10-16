@@ -1,17 +1,17 @@
 @import "/src/styles/_main.module";
 
 .footer {
-	width: 90%;
-	margin: 0 auto;
+  width: 90%;
+  margin: 0 auto;
 
   overflow: auto;
 
-	> p {
-		margin: 50px 0;
-		text-align: center;
+  >p {
+    margin: 3.125em 0;
+    text-align: center;
 
-		font-size: 12px;
-	}
+    font-size: 0.75em;
+  }
 }
 
 .heading {
@@ -19,14 +19,14 @@
   text-align: center;
   margin: 0 auto;
 
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
 .socials {
   display: flex;
   width: 90%;
-  margin: 10px auto -10px auto;
+  margin: 0.625em auto -0.625em auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -34,18 +34,18 @@
   padding: 0;
   list-style-type: none;
 
-  > li {
-    margin: 10px;
+  >li {
+    margin: 0.625em;
 
-    > a {
+    >a {
       display: inline-block;
-      font-size: 0;
+      font-size: 0em;
 
       cursor: pointer;
 
-      > img {
-        max-width: 30px;
-        max-height: 30px;
+      >img {
+        max-width: 1.875em;
+        max-height: 1.875em;
       }
     }
   }

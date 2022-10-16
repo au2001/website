@@ -1,11 +1,10 @@
 import * as React from "react"
 
-import Header from "/src/components/header.tsx"
-import Timeline from "/src/components/index/timeline.tsx"
-import Clients from "/src/components/index/clients.tsx"
-import Interview from "/src/components/index/interview.tsx"
-import Footer from "/src/components/footer.tsx"
-import Background from "/src/components/background.tsx"
+import Timeline from "../components/index/timeline"
+import Clients from "../components/index/clients"
+import Interview from "../components/index/interview"
+import Footer from "../components/footer"
+import Background from "../components/background"
 
 import * as styles from "./index.module.scss"
 

@@ -5,14 +5,14 @@
   text-align: center;
   margin: 0 auto;
 
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
 .clients {
   display: flex;
   width: 90%;
-  margin: 10px auto -10px auto;
+  margin: 0.625em auto -0.625em auto;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -20,18 +20,18 @@
   padding: 0;
   list-style-type: none;
 
-  > li {
-    margin: 10px;
+  >li {
+    margin: 0.625em;
 
-    > a {
+    >a {
       display: inline-block;
-      font-size: 0;
+      font-size: 0em;
 
       cursor: pointer;
 
-      > img {
-        max-width: 100px;
-        max-height: 50px;
+      >img {
+        max-width: 6.25em;
+        max-height: 3.125em;
       }
     }
   }
@@ -39,7 +39,7 @@
 
 .note {
   width: 90%;
-  margin: 20px auto 0 auto;
+  margin: 1.25em auto 0 auto;
 
   text-align: center;
 }

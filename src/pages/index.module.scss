@@ -2,24 +2,24 @@
 
 .heading {
   width: max-content;
-  margin: 150px auto 0 auto;
+  margin: 9.375em auto 0 auto;
 
-  > .preHeading {
+  >.preHeading {
     font-weight: normal;
-    font-size: 24px;
+    font-size: 1.5em;
     margin: 0;
   }
 
-  > .mainHeading {
+  >.mainHeading {
     color: $SECONDARY;
     font-weight: bold;
-    font-size: 48px;
-    margin: 10px 0 0 0;
+    font-size: 3em;
+    margin: 0.625em 0 0 0;
   }
 
-  > .subHeading {
+  >.subHeading {
     font-weight: normal;
-    font-size: 16px;
+    font-size: 1em;
     margin: 0;
   }
 }
@@ -30,5 +30,5 @@
 }
 
 .spacer {
-  margin-bottom: 200px;
+  margin-bottom: 12.5em;
 }
