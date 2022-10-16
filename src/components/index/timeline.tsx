@@ -64,46 +64,57 @@ export default function Timeline() {
 
     return (
       <>
-        {timeline.map(({ from, to, active }) => {
-          const left = getDateOffset(from)
-          const right = getDateOffset(to)
-          const keyframesName = `timeline-appear-${key}-${from.getTime()}`
+        <td key={`${key}-desktop`} colSpan={years.length} className={styles.timelineDesktop}>
+          {timeline.map(({ from, to, active }) => {
+            const left = getDateOffset(from)
+            const right = getDateOffset(to)
+            const keyframesName = `timeline-appear-${key}-${from.getTime()}`
 
-          return <>
-            <style key={`${from.getTime()}-keyframes`}>{`
-              @keyframes ${keyframesName} {
-                0%              { right: ${(1 - left) * 100}%; }
-                ${left * 100}%  { right: ${(1 - left) * 100}%; }
-                ${right * 100}% { right: ${(1 - right) * 100}%; }
-                100%            { right: ${(1 - right) * 100}%; }
+            return <>
+              <style>{`
+                @keyframes ${keyframesName} {
+                  0%              { right: ${(1 - left) * 100}%; }
+                  ${left * 100}%  { right: ${(1 - left) * 100}%; }
+                  ${right * 100}% { right: ${(1 - right) * 100}%; }
+                  100%            { right: ${(1 - right) * 100}%; }
+                }
+              `}</style>
+              <div className={active ? styles.active : undefined} style={{
+                left: `${left * 100}%`,
+                right: `${(1 - right) * 100}%`,
+                animation: `${keyframesName} 1s linear forwards`
+              }} title={
+                active
+                  ? `Since ${formatDate(from)}`
+                  : `From ${formatDate(from)} to ${formatDate(to)}`
+              }></div>
+            </>
+          })}
+
+          {timeline.some(({ active }) => active) && <>
+            <style>{`
+              @keyframes ${activeKeyframes} {
+                0%                     { width: 0em; }
+                ${activeOffset * 100}% { width: 0em; }
+                100%                   { right: 0.25em; }
               }
             `}</style>
-            <div key={`${from.getTime()}-rect`} className={active ? styles.active : null} style={{
-              left: `${left * 100}%`,
-              right: `${(1 - right) * 100}%`,
-              animation: `${keyframesName} 1s linear forwards`
-            }} title={
-              active
-                ? `Since ${formatDate(from)}`
-                : `From ${formatDate(from)} to ${formatDate(to)}`
-            }></div>
-          </>
-        })}
+            <div className={styles.activeCap} style={{
+              left: `${activeOffset * 100}%`,
+              width: 4,
+              animation: `${activeKeyframes} 1s linear forwards`
+            }}></div>
+          </>}
+        </td>
 
-        {timeline.some(({ active }) => active) && <>
-          <style>{`
-            @keyframes ${activeKeyframes} {
-              0%                     { width: 0px; }
-              ${activeOffset * 100}% { width: 0px; }
-              100%                   { right: 4px; }
-            }
-          `}</style>
-          <div className={styles.activeCap} style={{
-            left: `${activeOffset * 100}%`,
-            width: 4,
-            animation: `${activeKeyframes} 1s linear forwards`
-          }}></div>
-        </>}
+        <td key={`${key}-mobile`} colSpan={years.length} className={styles.timelineMobile}>
+          {new Date(Math.min(...timeline.map(({ from }) => from.getTime()))).getFullYear()}
+          {" - "}
+          {timeline.some(({ active }) => active)
+            ? "now"
+            : new Date(Math.max(...timeline.map(({ from }) => from.getTime()))).getFullYear()
+          }
+        </td>
       </>
     )
   }
@@ -114,13 +125,12 @@ export default function Timeline() {
         <td>
           <h3>{item.name}</h3>
         </td>
-        <td></td>
-        <td colSpan={years.length} className={styles.timeline}>
-          {getTimeline(item.timeline, item.key)}
-        </td>
+        <td className={styles.spacing}></td>
+        {getTimeline(item.timeline, item.key)}
+        <td className={styles.spacingMobile}></td>
         <td>
           <span title={`${item.hours.toLocaleString("en-US")} hours (approx.)`}>
-            {item.roundedHours.toLocaleString("en-US")}+
+            {item.roundedHours.toLocaleString("en-US")}+<span className={styles.hoursMobile}> hours</span>
           </span>
         </td>
       </>
@@ -138,10 +148,11 @@ export default function Timeline() {
         <tr>
           <th></th>
           <th></th>
-          <th className={styles.spacing}></th>
+          <th></th>
           {years.map(year =>
             <th key={year} className={styles.legend}><span>{year}</span></th>
           )}
+          <th></th>
           <th>Hours invested</th>
         </tr>
       </thead>
