@@ -25,13 +25,13 @@
 
     >a {
       display: inline-block;
-      font-size: 0em;
 
       cursor: pointer;
 
       >img {
         max-width: 6.25em;
         max-height: 3.125em;
+        vertical-align: middle;
       }
     }
   }

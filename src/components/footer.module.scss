@@ -39,13 +39,13 @@
 
     >a {
       display: inline-block;
-      font-size: 0em;
 
       cursor: pointer;
 
       >img {
         max-width: 1.875em;
         max-height: 1.875em;
+        vertical-align: middle;
       }
     }
   }
