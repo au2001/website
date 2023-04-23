@@ -11,49 +11,49 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: lts/*
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: lts/*
 
-    - name: Get npm cache directory
-      id: npm-cache-dir
-      run: |
-        echo "::set-output name=dir::$(npm config get cache)"
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
 
-    - name: Restore npm cache
-      uses: actions/cache@v3
-      with:
-        path: ${{ steps.npm-cache-dir.outputs.dir }}
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
+      - name: Restore npm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-    - name: Install dependencies
-      run: |
-        npm ci
+      - name: Install dependencies
+        run: |
+          npm ci
 
-    - name: Build project
-      run: |
-        ./node_modules/.bin/gatsby build
+      - name: Build project
+        run: |
+          ./node_modules/.bin/gatsby build
 
-    - name: Define custom domain
-      run: |
-        echo "$DOMAIN" > ./public/CNAME
+      - name: Define custom domain
+        run: |
+          echo "$DOMAIN" > ./public/CNAME
 
-    - name: Disable Jekyll
-      run: |
-        touch ./public/.nojekyll
+      - name: Disable Jekyll
+        run: |
+          touch ./public/.nojekyll
 
-    - name: Login to GitHub
-      run: |
-        git remote set-url origin "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Login to GitHub
+        run: |
+          git remote set-url origin "https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    - name: Push to gh-pages
-      run: |
-        ./node_modules/.bin/gh-pages -d public -u "github-actions <41898282+github-actions@users.noreply.github.com>" -t
+      - name: Push to gh-pages
+        run: |
+          ./node_modules/.bin/gh-pages -d public -u "github-actions <41898282+github-actions@users.noreply.github.com>" -t

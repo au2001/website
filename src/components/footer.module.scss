@@ -6,7 +6,7 @@
 
   overflow: auto;
 
-  >p {
+  > p {
     margin: 3.125em 0;
     text-align: center;
 
@@ -34,15 +34,15 @@
   padding: 0;
   list-style-type: none;
 
-  >li {
+  > li {
     margin: 0.625em;
 
-    >a {
+    > a {
       display: inline-block;
 
       cursor: pointer;
 
-      >img {
+      > img {
         max-width: 1.875em;
         max-height: 1.875em;
         vertical-align: middle;

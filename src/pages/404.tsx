@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Link } from "gatsby"
+import * as React from "react";
+import { Link } from "gatsby";
 
-import * as styles from "./404.module.scss"
+import * as styles from "./404.module.scss";
 
 export default function NotFoundPage() {
   return (
@@ -18,5 +18,5 @@ export default function NotFoundPage() {
         </p>
       </div>
     </>
-  )
+  );
 }

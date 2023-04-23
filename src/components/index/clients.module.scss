@@ -20,15 +20,15 @@
   padding: 0;
   list-style-type: none;
 
-  >li {
+  > li {
     margin: 0.625em;
 
-    >a {
+    > a {
       display: inline-block;
 
       cursor: pointer;
 
-      >img {
+      > img {
         max-width: 6.25em;
         max-height: 3.125em;
         vertical-align: middle;
