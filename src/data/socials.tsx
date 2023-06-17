@@ -28,14 +28,12 @@ export default [
     account: "au2001",
     prefix: "@",
     link: "https://keybase.io/au2001",
-    primary: true,
   },
   {
     name: "PayPal",
     logo: require("/src/images/socials/PayPal.svg").default,
     account: "paypal@garnier.dev",
     link: "https://paypal.me/garnieraurelien",
-    primary: true,
   },
   {
     name: "Buy me a coffee",
@@ -43,7 +41,6 @@ export default [
     account: "aurelien.g",
     prefix: "@",
     link: "https://www.buymeacoffee.com/aurelien.g",
-    primary: true,
   },
   {
     name: "GitLab",
@@ -55,7 +52,7 @@ export default [
   {
     name: "Discord",
     logo: require("/src/images/socials/Discord.svg").default,
-    account: "Aurélien#6989",
+    account: "au2001",
   },
   {
     name: "Reddit",
@@ -100,9 +97,9 @@ export default [
   {
     name: "Twitch",
     logo: require("/src/images/socials/Twitch.svg").default,
-    account: "au2001",
+    account: "its_me_aurelien",
     prefix: "@",
-    link: "https://twitch.tv/au2001",
+    link: "https://twitch.tv/its_me_aurelien",
   },
   {
     name: "Spotify",

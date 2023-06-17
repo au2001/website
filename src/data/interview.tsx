@@ -1,21 +1,16 @@
 const now = new Date();
 
 // Feb 13th, 2001
-let age =
+const age =
   now.getFullYear() - 2001 - (now < new Date(now.getFullYear(), 1, 13) ? 1 : 0);
 
-// March 1st, 2023
-const graduated = now < new Date(2023, 2, 1);
+const experience = now.getFullYear() - 2012;
 
 export default [
   {
     question: "Can you introduce yourself?",
     answer: `\
-			I’m Aurélien. I’m ${age} years old. I was born in Mountain View, CA, USA. I then moved to Paris, France for all of my studies up to my engineering degree in computer science. ${
-      graduated
-        ? "I will be graduating from Efrei Paris next March (2023)."
-        : "I graduated from Efrei Paris in 2023."
-    }\
+			I’m Aurélien. I’m ${age} years old. I was born in Mountain View, CA, USA. I then moved to Paris, France for all of my studies up to my Master’s degree in computer science. I graduated from Efrei Paris in 2023.\
 		`,
   },
   {
@@ -31,7 +26,7 @@ export default [
     answer:
       "\
 			My first steps in computer science took place in 2011. I was then trying to grasp concepts by reading documentation and experimenting with scripts.<br/>\
-			I would say I only became a <i>web developer</i> a year later in 2012, and a <i>Java</i> developer in 2013. I earned my first buck by selling my services and software around that time. I then created a video games organization with a friend.<br/>\
+			I would say I only became a <i>web developer</i> a year later in 2012, and a <i>Java</i> developer in 2013. I earned my first buck by selling my services and software around that time.<br/>\
 			In 2016, I began working with bigger corporations on more complex business-grade projects. I founded my own service company in 2019, at 18 years old.\
 		",
   },
@@ -41,7 +36,7 @@ export default [
     answer:
       '\
 			I joined Efrei Paris, engineering school of digital technologies, in 2018. It has consistently been <a href="https://eng.efrei.fr/the-school/rankings/" target="_blank" rel="nofollow external">ranked in the top computer science schools in France</a>.<br/>\
-			I majored in <i>Cloud Architecture/DevOps</i>, minoring as <i>Certified Ethical Hacker</i>.<br/>\
+			I majored in <i>Cloud Architecture</i>, minoring in <i>DevOps</i> and <i>Cybersecurity</i>.<br/>\
 			The vast majority of my know-how is self-taught though. Because I was already proficient before entering college, I used those 5 years to build professional experience and to learn the codes of the professional world.\
 		',
   },
@@ -49,9 +44,9 @@ export default [
     question: "What are some of your most prominent qualities?",
     answer:
       "\
-			<i>1.</i> I have advanced <i>problem-solving</i> skills, including with highly abstract concepts. I’m thus able to see the bigger picture in complex environments.<br/>\
-			<i>2.</i> I pay great <i>attention to detail</i>. Trailing whitespace? None. Spacing? To the pixel. Algorithms? Optimized. Edge cases? Covered. <sub>Hotel? Trivago.</sub><br/>\
-			<i>3.</i> I’m highly <i>reliable</i> and <i>dependable</i>, even in stressful and/or time-sensitive contexts. I’m often referred to as the cornerstone of teamwork I take part in.<br/>\
+			<i>1.</i> I pay great <i>attention to detail</i>. Trailing whitespace? None. Spacing? To the pixel. Algorithms? Optimized. Edge cases? Covered. <sub>Hotel? Trivago.</sub><br/>\
+			<i>2.</i> I’m highly <i>reliable</i> and <i>dependable</i>, even in stressful and/or time-sensitive contexts. I’m often referred to as the cornerstone of teamwork I take part in.<br/>\
+			<i>3.</i> I have advanced <i>problem-solving</i> skills, including with highly abstract concepts. I’m thus able to see the bigger picture in complex environments.<br/>\
 			<i>4.</i> I’m <i>honest</i> about my work and in the feedback that I give. I can give constructive criticism about others’ work, and mine too. I own my mistakes.\
 		",
     //  <i>5.</i> I’m an extremely <i>fast-learner</i>: I learn new tools in a day, and achieve a comprehensive understanding within a month. It led to me being very flexible, as I have worked in plenty of different environments and can adapt instantly.<br/>\
@@ -67,12 +62,11 @@ export default [
   },
   {
     question: "What are you passionate about?",
-    answer:
-      "\
-			First of all, high tech, obviously. I’ve spent most of my spare time of the past 10+ years working on either computer software or hardware.<br/>\
+    answer: `\
+			First of all, high tech, obviously. I’ve spent most of my spare time of the past ${experience}+ years working on either computer software or hardware.<br/>\
 			I also like playing video games and driving cars. I love reading about space, aircrafts, and more generally innovation in science.<br/>\
-			Finally, I’m committed to the environment, and have been for over 6 years.\
-		",
+			Finally, I’m committed to openness of knowledge and information, as well as decentralization.\
+		`,
   },
   {
     question: "What are your mid-term career objectives?",

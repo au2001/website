@@ -12,6 +12,11 @@ export default [
         to: "2020-03-31",
         hoursPerDay: 3,
       },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 2,
+      },
     ],
   },
   {
@@ -24,8 +29,13 @@ export default [
       },
       {
         from: "2019-11-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 2,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.5,
       },
     ],
   },
@@ -34,8 +44,13 @@ export default [
     timeline: [
       {
         from: "2021-09-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 2.5,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.5,
       },
     ],
   },
@@ -72,6 +87,11 @@ export default [
         to: "2021-05-31",
         hoursPerDay: 0.5,
       },
+      {
+        from: "2022-11-01",
+        to: "now",
+        hoursPerDay: 0.1,
+      },
     ],
   },
   {
@@ -84,8 +104,13 @@ export default [
       },
       {
         from: "2019-11-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 0.5,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.2,
       },
     ],
   },
@@ -94,8 +119,13 @@ export default [
     timeline: [
       {
         from: "2019-11-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 1,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.2,
       },
     ],
   },
@@ -109,8 +139,13 @@ export default [
       },
       {
         from: "2019-03-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 1.5,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 2,
       },
     ],
   },
@@ -119,8 +154,13 @@ export default [
     timeline: [
       {
         from: "2018-09-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 0.5,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.1,
       },
     ],
   },
@@ -139,7 +179,7 @@ export default [
     timeline: [
       {
         from: "2013-06-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 1,
       },
     ],
@@ -164,8 +204,13 @@ export default [
     timeline: [
       {
         from: "2012-09-01",
-        to: "now",
+        to: "2022-08-31",
         hoursPerDay: 2,
+      },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.2,
       },
     ],
   },
@@ -207,6 +252,11 @@ export default [
         to: "2017-12-31",
         hoursPerDay: 0.5,
       },
+      {
+        from: "2022-09-01",
+        to: "now",
+        hoursPerDay: 0.2,
+      },
     ],
   },
   {
@@ -224,7 +274,7 @@ export default [
     timeline: [
       {
         from: "2017-06-01",
-        to: "now",
+        to: "2022-03-31",
         hoursPerDay: 0.5,
       },
     ],
@@ -244,7 +294,7 @@ export default [
     timeline: [
       {
         from: "2015-12-01",
-        to: "now",
+        to: "2021-10-31",
         hoursPerDay: 0.2,
       },
     ],
@@ -263,9 +313,14 @@ export default [
     name: "Web 3 & Blockchain",
     timeline: [
       {
-        from: "2022-01-01",
-        to: "now",
+        from: "2022-05-01",
+        to: "2022-10-31",
         hoursPerDay: 0.2,
+      },
+      {
+        from: "2022-11-01",
+        to: "now",
+        hoursPerDay: 6,
       },
     ],
   },
