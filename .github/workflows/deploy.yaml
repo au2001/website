@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  DOMAIN: aurelien.garnier.dev
+  BUILD_OUTPUT: out
+  AUTHOR: github-actions <41898282+github-actions@users.noreply.github.com>
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Define custom domain
+        run: echo "$DOMAIN" > "$BUILD_OUTPUT/CNAME"
+
+      - name: Disable Jekyll
+        run: touch "$BUILD_OUTPUT/.nojekyll"
+
+      - name: Login to GitHub
+        run: git remote set-url origin "https://git:$GITHUB_TOKEN@github.com/$GITHUB_REPOSITORY.git"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Push to gh-pages
+        run: npx gh-pages -d "$BUILD_OUTPUT" -u "$AUTHOR" -t
