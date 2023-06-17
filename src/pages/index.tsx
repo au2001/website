@@ -11,8 +11,6 @@ import * as styles from "./index.module.scss";
 export default function IndexPage() {
   return (
     <>
-      <title>Aurélien Garnier</title>
-
       <Background />
 
       <div className={styles.fold}>
@@ -40,4 +38,8 @@ export default function IndexPage() {
       <Footer />
     </>
   );
+}
+
+export function Head() {
+  return <title>Aurélien Garnier</title>;
 }

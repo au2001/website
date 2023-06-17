@@ -5,11 +5,9 @@ const config: GatsbyConfig = {
     title: "aurelien.garnier.dev",
     siteUrl: "https://aurelien.garnier.dev",
   },
-  graphqlTypegen: true,
   trailingSlash: "never",
   plugins: [
     "gatsby-plugin-sass",
-    "gatsby-plugin-dts-css-modules",
     "gatsby-plugin-image",
     "gatsby-plugin-sitemap",
     {

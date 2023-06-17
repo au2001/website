@@ -17,26 +17,25 @@
     "format": "prettier --write ."
   },
   "dependencies": {
-    "gatsby": "^5.10.0",
-    "gatsby-plugin-image": "^3.9.0",
-    "gatsby-plugin-manifest": "^5.9.0",
-    "gatsby-plugin-sass": "^6.9.0",
-    "gatsby-plugin-sharp": "^5.9.0",
-    "gatsby-plugin-sitemap": "^6.9.0",
-    "gatsby-source-filesystem": "^5.9.0",
-    "gatsby-transformer-sharp": "^5.9.0",
+    "gatsby": "^5.11.0",
+    "gatsby-plugin-image": "^3.11.0",
+    "gatsby-plugin-manifest": "^5.11.0",
+    "gatsby-plugin-sass": "^6.11.0",
+    "gatsby-plugin-sharp": "^5.11.0",
+    "gatsby-plugin-sitemap": "^6.11.0",
+    "gatsby-source-filesystem": "^5.11.0",
+    "gatsby-transformer-sharp": "^5.11.0",
     "random-js": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "sass": "^1.62.0"
+    "sass": "^1.63.4"
   },
   "devDependencies": {
-    "@types/node": "^18.16.0",
-    "@types/react": "^18.0.38",
-    "@types/react-dom": "^18.0.11",
-    "gatsby-plugin-dts-css-modules": "^3.0.0",
+    "@types/node": "^20.2.6",
+    "@types/react": "^18.2.9",
+    "@types/react-dom": "^18.2.4",
     "gh-pages": "^5.0.0",
     "prettier": "^2.8.8",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.3"
   }
 }
