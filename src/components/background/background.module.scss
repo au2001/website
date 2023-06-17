@@ -1,0 +1,13 @@
+@import "@/lib/colors";
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  z-index: -1;
+
+  color: white;
+  opacity: 0.08;
+}

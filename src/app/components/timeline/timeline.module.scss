@@ -1,0 +1,70 @@
+@import "@/lib/colors";
+@import "@/lib/breakpoints";
+
+.timeline {
+  position: relative;
+  width: max-content;
+  margin: 1.875em auto 0 auto;
+  border-collapse: collapse;
+
+  th {
+    line-height: 1.25em;
+    font-size: 1em;
+    font-weight: normal;
+
+    &.legend {
+      min-width: 6.25em;
+      text-align: left;
+
+      span {
+        margin-left: -1em;
+      }
+
+      &::before {
+        content: "";
+
+        position: absolute;
+        margin-left: -0.125em;
+        height: calc(100% - 1.5625em);
+        top: 1.5625em;
+        border-right: 0.0625em dashed $PRIMARY;
+
+        opacity: 0.5;
+      }
+    }
+
+    @include mobile {
+      display: none;
+    }
+  }
+
+  td {
+    line-height: 1em;
+
+    h2,
+    h3 {
+      font-size: 1em;
+      font-weight: normal;
+
+      margin: 0;
+    }
+
+    h2 {
+      white-space: nowrap;
+      margin-right: 0.3125em;
+    }
+
+    h3,
+    span {
+      color: $SECONDARY;
+    }
+
+    h3 {
+      margin-right: 0.625em;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

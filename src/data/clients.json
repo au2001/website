@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Ecomesure",
+    "logo": "/images/clients/Ecomesure.png",
+    "website": "https://ecomesure.com/en"
+  },
+  {
+    "name": "diivii",
+    "logo": "/images/clients/Diivii.png",
+    "website": "https://diivii.com"
+  },
+  {
+    "name": "SEPEFREI Junior-Enterprise",
+    "logo": "/images/clients/SEPEFREI.png",
+    "website": "https://sepefrei.fr"
+  },
+  {
+    "name": "Prisma Media",
+    "logo": "/images/clients/PrismaMedia.png",
+    "website": "https://www.prismamedia.com"
+  },
+  {
+    "name": "Télé-Loisirs",
+    "logo": "/images/clients/TeleLoisirs.png",
+    "website": "https://www.programme-tv.net"
+  },
+  {
+    "name": "Hewlett-Packard",
+    "logo": "/images/clients/HewlettPackard.png",
+    "website": "https://www.hp.com/us-en/home.html"
+  },
+  {
+    "name": "Atos IT",
+    "logo": "/images/clients/Atos.png",
+    "website": "https://atos.net/en/"
+  },
+  {
+    "name": "Avicenne Agency",
+    "logo": "/images/clients/Avicenne.png",
+    "website": "https://avicenne-agency.com/en/"
+  },
+  {
+    "name": "ERA2140",
+    "logo": "/images/clients/ERA2140.png",
+    "website": "https://www.era2140.com"
+  },
+  {
+    "name": "ShadowAxe",
+    "logo": "/images/clients/ShadowAxe.png",
+    "website": "https://shadowaxe.fr"
+  }
+]

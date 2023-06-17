@@ -1,0 +1,47 @@
+@import "@/lib/colors";
+
+.heading {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.interview {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 40em;
+  margin: 0 auto;
+  align-items: stretch;
+
+  padding: 0;
+  list-style-type: none;
+
+  > li {
+    margin-top: 3.125em;
+
+    > h2 {
+      color: $SECONDARY;
+
+      font-size: 1.125em;
+      font-weight: normal;
+
+      margin: 0;
+    }
+
+    > p {
+      margin: 1em 0 0 3.125em;
+
+      a {
+        color: inherit;
+      }
+
+      sub {
+        opacity: 0.2;
+      }
+    }
+  }
+}

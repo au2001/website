@@ -1,0 +1,74 @@
+@import "@/lib/colors";
+@import "@/lib/breakpoints";
+
+.timelineDesktop {
+  position: relative;
+
+  div {
+    position: absolute;
+    top: 0.375em;
+    height: 0.5em;
+    background-color: $SECONDARY;
+    border-radius: 0.1875em;
+
+    &.active {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.activeCap {
+      border-radius: 0;
+      background: linear-gradient(to right, $SECONDARY, transparent);
+    }
+  }
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.timelineMobile {
+  position: relative;
+
+  div {
+    position: absolute;
+    top: 0.375em;
+    height: 0.5em;
+    background-color: $SECONDARY;
+    border-radius: 0.1875em;
+
+    &.active {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    &.activeCap {
+      border-radius: 0;
+      background: linear-gradient(to right, $SECONDARY, transparent);
+    }
+  }
+
+  @include desktop {
+    display: none;
+  }
+}
+
+.spacing {
+  width: 1em;
+
+  @include mobile {
+    width: 0em;
+  }
+}
+
+.spacingMobile {
+  @include mobile {
+    width: 0.625em;
+  }
+}
+
+.hoursMobile {
+  @include desktop {
+    display: none;
+  }
+}
