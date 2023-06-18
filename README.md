@@ -1,34 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Aurélien Garnier's website
 
-## Getting Started
+This is the source code for my personal website.\
+It is currently hosted on GitHub Pages at [garnier.dev](https://garnier.dev).
 
-First, run the development server:
+It uses [Next.js](https://nextjs.org) to pre-render all pages to static HTML/CSS which loads blazingly fast™.\
+The pages themselves are [React](https://reactjs.org) [Server Components](https://react.dev/blog/2020/12/21/data-fetching-with-react-server-components).
 
-```bash
+Currently, only two pages exist: index and 404.
+
+## Build and run
+
+To run the website in development mode, use:
+
+```
+npm i
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build the website (pre-render all pages), use:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+npm run build
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The resulting static files are placed in the `out` folder.
+They can then be hosted on GitHub Pages, Cloudflare Pages, AWS S3...
 
-## Learn More
+## Automation
 
-To learn more about Next.js, take a look at the following resources:
+This repository contains a `deploy` GitHub Actions workflow.\
+It automatically builds the website and deploys it to GitHub Pages.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The most up-to-date deployed version can be obtained on the `gh-pages` branch.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## TODO
 
-## Deploy on Vercel
+Here is a list of planned upcoming improvements, roughly ranked by priority:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Adding a portfolio of my projects, contributions, and more generally of my past work;
+- Moving the bulk of my social links form the footer to a dedicated `Contact` page, with an additional contact form;
+- Creating a `Learn` page with the process through which I learnt different stuff, with a cheatsheet- and tutorial-oriented format;
+- Internationalizing and translating to different languages, most notably French;
