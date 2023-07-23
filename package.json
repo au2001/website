@@ -8,7 +8,8 @@
     "lint": "next lint",
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "generate-background": "tsx scripts/generate-background.tsx"
   },
   "dependencies": {
     "@types/node": "20.3.1",
@@ -28,6 +29,9 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "2.8.8",
-    "sass": "^1.63.4"
+    "random-js": "^2.1.0",
+    "sass": "^1.63.4",
+    "tsx": "^3.12.7",
+    "xmlbuilder2": "^3.1.1"
   }
 }
