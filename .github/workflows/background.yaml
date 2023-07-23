@@ -1,0 +1,39 @@
+name: Regenerate Background SVG
+
+on:
+  schedule:
+    - cron: 0 */6 * * * # Every 6 hours
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          cache: npm
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Generate background SVG
+        run: npm run generate-background
+
+      - name: Configure Git
+        run: |
+          git config user.name github-actions
+          git config user.email 41898282+github-actions@users.noreply.github.com
+
+      - name: Commit and push changes
+        run: |
+          git commit -m "Regenerate Background SVG" -- public/images/background.svg
+          git push
+
+  deploy:
+    needs: generate
+    uses: ./.github/workflows/deploy.yaml
