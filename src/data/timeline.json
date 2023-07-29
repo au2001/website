@@ -24,8 +24,13 @@
       },
       {
         "from": "2019-11-01",
-        "to": "now",
+        "to": "2022-11-30",
         "hoursPerDay": 2
+      },
+      {
+        "from": "2023-04-01",
+        "to": "now",
+        "hoursPerDay": 0.5
       }
     ]
   },
@@ -34,8 +39,28 @@
     "timeline": [
       {
         "from": "2021-09-01",
-        "to": "now",
+        "to": "2022-03-31",
         "hoursPerDay": 2.5
+      },
+      {
+        "from": "2022-05-01",
+        "to": "now",
+        "hoursPerDay": 1
+      }
+    ]
+  },
+  {
+    "name": "Web 3 & Blockchain",
+    "timeline": [
+      {
+        "from": "2022-01-01",
+        "to": "2022-10-31",
+        "hoursPerDay": 0.2
+      },
+      {
+        "from": "2022-11-01",
+        "to": "now",
+        "hoursPerDay": 6
       }
     ]
   },
@@ -84,7 +109,7 @@
       },
       {
         "from": "2019-11-01",
-        "to": "now",
+        "to": "2022-03-31",
         "hoursPerDay": 0.5
       }
     ]
@@ -94,8 +119,13 @@
     "timeline": [
       {
         "from": "2019-11-01",
-        "to": "now",
+        "to": "2022-03-31",
         "hoursPerDay": 1
+      },
+      {
+        "from": "2022-11-01",
+        "to": "now",
+        "hoursPerDay": 0.2
       }
     ]
   },
@@ -109,8 +139,13 @@
       },
       {
         "from": "2019-03-01",
-        "to": "now",
+        "to": "2022-10-31",
         "hoursPerDay": 1.5
+      },
+      {
+        "from": "2022-11-01",
+        "to": "now",
+        "hoursPerDay": 4
       }
     ]
   },
@@ -164,8 +199,13 @@
     "timeline": [
       {
         "from": "2012-09-01",
-        "to": "now",
+        "to": "2018-08-31",
         "hoursPerDay": 2
+      },
+      {
+        "from": "2018-09-01",
+        "to": "now",
+        "hoursPerDay": 0.5
       }
     ]
   },
@@ -194,8 +234,13 @@
     "timeline": [
       {
         "from": "2012-11-01",
+        "to": "2018-08-31",
+        "hoursPerDay": 0.5
+      },
+      {
+        "from": "2018-09-01",
         "to": "now",
-        "hoursPerDay": 0.1
+        "hoursPerDay": 2
       }
     ]
   },
@@ -224,7 +269,7 @@
     "timeline": [
       {
         "from": "2017-06-01",
-        "to": "now",
+        "to": "2019-10-31",
         "hoursPerDay": 0.5
       }
     ]
@@ -244,7 +289,7 @@
     "timeline": [
       {
         "from": "2015-12-01",
-        "to": "now",
+        "to": "2022-12-31",
         "hoursPerDay": 0.2
       }
     ]
@@ -260,22 +305,17 @@
     ]
   },
   {
-    "name": "Web 3 & Blockchain",
-    "timeline": [
-      {
-        "from": "2022-01-01",
-        "to": "now",
-        "hoursPerDay": 0.2
-      }
-    ]
-  },
-  {
     "name": "UI/UX",
     "timeline": [
       {
         "from": "2019-11-01",
         "to": "2021-05-31",
         "hoursPerDay": 0.2
+      },
+      {
+        "from": "2022-04-01",
+        "to": "now",
+        "hoursPerDay": 0.1
       }
     ]
   }
