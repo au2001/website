@@ -15,11 +15,15 @@ export default function Timeline() {
       )
     );
 
+    const count = 4;
+
     const minYear = new Date(minDate).getFullYear();
     let maxYear = now.getFullYear();
-    if ((maxYear - minYear) % 2 !== 0) --maxYear;
+    maxYear -= (maxYear - minYear) % (count - 1);
 
-    return [minYear, (minYear + maxYear) / 2, maxYear];
+    return [...new Array(count)].map(
+      (_, i) => minYear + ((maxYear - minYear) / (count - 1)) * i
+    );
   }, [now]);
 
   return (
