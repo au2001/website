@@ -26,7 +26,7 @@ const interview = [
     answer:
       "\
 			My first steps in computer science took place in 2011. I was then trying to grasp concepts by reading documentation and experimenting with scripts.<br/>\
-			I would say I only became a <i>web developer</i> a year later in 2012, and a <i>Java</i> developer in 2013. I earned my first buck by selling my services and software around that time.<br/>\
+			I only started <i>web development</i> a year later in 2012, and <i>Java</i> in 2013. I earned my first buck by selling my services and software around that time.<br/>\
 			In 2016, I began working with bigger corporations on more complex business-grade projects. I founded my own service company in 2019, at 18 years old.\
 		",
   },
@@ -64,7 +64,7 @@ const interview = [
     question: "What are you passionate about?",
     answer: `\
 			First of all, high tech, obviously. I’ve spent most of my spare time of the past ${experience}+ years working on either computer software or hardware.<br/>\
-			I also like playing video games and driving cars. I love reading about space, aircrafts, and more generally innovation in science.<br/>\
+			I also like playing video games, travelling and flying planes. I love reading about space and more generally about innovation in science.<br/>\
 			Finally, I’m committed to openness of knowledge and information, as well as decentralization.\
 		`,
   },
@@ -72,7 +72,7 @@ const interview = [
     question: "What are your mid-term career objectives?",
     answer:
       "\
-			I aim at working for a leader in tech, where I can evolve and discover new career paths. Additionally, I’m thrilled by solving challenging issues at a global scale and being impactful in IT. I strongly believe I can be a real asset for doing so through innovation as well as consolidation.<br/>\
+			I aim at working for a leader in tech in the next 5 years, where I can evolve and discover new career paths. Additionally, I’m thrilled by solving challenging issues at a global scale and being impactful in IT. I strongly believe I can be a real asset for doing so through innovation as well as consolidation.<br/>\
 			I would also like to travel around the world while working remotely sometimes. Even if that means having to attend meetings in the middle of the night.\
 		",
   },
