@@ -4,7 +4,8 @@
     "logo": "/images/socials/Email.svg",
     "account": "contact@garnier.dev",
     "link": "mailto:contact@garnier.dev",
-    "primary": true
+    "type": "contact",
+    "footer": true
   },
   {
     "name": "LinkedIn",
@@ -12,7 +13,8 @@
     "account": "aurelien-garnier",
     "prefix": "in/",
     "link": "https://linkedin.com/in/aurelien-garnier",
-    "primary": true
+    "type": "work",
+    "footer": true
   },
   {
     "name": "GitHub",
@@ -20,115 +22,152 @@
     "account": "au2001",
     "prefix": "@",
     "link": "https://github.com/au2001",
-    "primary": true
+    "type": "work",
+    "footer": true
+  },
+  {
+    "name": "Matrix",
+    "logo": "/images/socials/Matrix.svg",
+    "account": "@au2001:matrix.org",
+    "link": "https://matrix.to/#/@au2001:matrix.org",
+    "type": "contact"
   },
   {
     "name": "Keybase",
     "logo": "/images/socials/Keybase.svg",
     "account": "au2001",
     "prefix": "@",
-    "link": "https://keybase.io/au2001"
+    "link": "https://keybase.io/au2001",
+    "type": "contact"
   },
   {
     "name": "PayPal",
     "logo": "/images/socials/PayPal.svg",
     "account": "paypal@garnier.dev",
-    "link": "https://paypal.me/garnieraurelien"
+    "link": "https://paypal.me/garnieraurelien",
+    "type": "donate"
   },
   {
     "name": "Buy me a coffee",
     "logo": "/images/socials/BuyMeACoffee.svg",
     "account": "aurelien.g",
     "prefix": "@",
-    "link": "https://www.buymeacoffee.com/aurelien.g"
+    "link": "https://www.buymeacoffee.com/aurelien.g",
+    "type": "donate"
   },
   {
     "name": "GitLab",
     "logo": "/images/socials/GitLab.svg",
     "account": "au2001",
     "prefix": "@",
-    "link": "https://gitlab.com/au2001"
+    "link": "https://gitlab.com/au2001",
+    "type": "work"
   },
   {
     "name": "Discord",
     "logo": "/images/socials/Discord.svg",
-    "account": "au2001"
+    "account": "au2001",
+    "type": "contact"
   },
   {
     "name": "Reddit",
     "logo": "/images/socials/Reddit.svg",
     "account": "au2001",
     "prefix": "u/",
-    "link": "https://reddit.com/u/au2001"
+    "link": "https://reddit.com/u/au2001",
+    "type": "social"
   },
   {
     "name": "Twitter",
     "logo": "/images/socials/Twitter.svg",
     "account": "au2001sfg",
     "prefix": "@",
-    "link": "https://twitter.com/au2001sfg"
+    "link": "https://twitter.com/au2001sfg",
+    "type": "social"
   },
   {
     "name": "Telegram",
     "logo": "/images/socials/Telegram.svg",
     "account": "au2001sfg",
     "prefix": "@",
-    "link": "https://t.me/au2001sfg"
+    "link": "https://t.me/au2001sfg",
+    "type": "contact"
   },
   {
     "name": "Facebook",
     "logo": "/images/socials/Facebook.svg",
     "account": "au2001sfg",
-    "link": "https://www.facebook.com/au2001sfg/"
+    "link": "https://www.facebook.com/au2001sfg/",
+    "type": "social"
   },
   {
     "name": "Instagram",
     "logo": "/images/socials/Instagram.svg",
     "account": "its_me_aurelien",
     "prefix": "@",
-    "link": "https://www.instagram.com/its_me_aurelien/"
+    "link": "https://www.instagram.com/its_me_aurelien/",
+    "type": "social"
   },
   {
     "name": "YouTube",
     "logo": "/images/socials/YouTube.svg",
     "account": "au2001sfg",
-    "link": "https://youtube.com/au2001sfg"
+    "link": "https://youtube.com/au2001sfg",
+    "type": "social"
   },
   {
     "name": "Twitch",
     "logo": "/images/socials/Twitch.svg",
     "account": "its_me_aurelien",
     "prefix": "@",
-    "link": "https://twitch.tv/its_me_aurelien"
+    "link": "https://twitch.tv/its_me_aurelien",
+    "type": "social"
   },
   {
     "name": "Spotify",
     "logo": "/images/socials/Spotify.svg",
     "account": "Aurélien",
-    "link": "https://open.spotify.com/user/y0w5mx21agvgifntn9pwm0gvn"
+    "link": "https://open.spotify.com/user/y0w5mx21agvgifntn9pwm0gvn",
+    "type": "social"
   },
   {
     "name": "Steam",
     "logo": "/images/socials/Steam.svg",
     "account": "au_gamer",
-    "link": "https://steamcommunity.com/id/au_gamer/"
+    "link": "https://steamcommunity.com/id/au_gamer/",
+    "type": "social"
   },
   {
     "name": "Battle.net",
     "logo": "/images/socials/BattleNet.svg",
-    "account": "au2001#21393"
+    "account": "au2001#21393",
+    "type": "social"
   },
   {
     "name": "Xbox",
     "logo": "/images/socials/Xbox.svg",
     "account": "au2001",
-    "prefix": "@"
+    "prefix": "@",
+    "type": "social"
   },
   {
     "name": "Snapchat",
     "logo": "/images/socials/Snapchat.svg",
     "account": "au2001",
     "prefix": "@",
-    "link": "https://www.snapchat.com/add/au2001"
+    "link": "https://www.snapchat.com/add/au2001",
+    "type": "social"
+  },
+  {
+    "name": "Bitcoin",
+    "logo": "/images/socials/Bitcoin.svg",
+    "account": "bc1qa0d6437vq2jvujsvup40aemrl2ax7vzzt6ze7w",
+    "type": "donate"
+  },
+  {
+    "name": "Ethereum",
+    "logo": "/images/socials/Ethereum.svg",
+    "account": "0x6194E0A43Fd43624e15f16892724096cD030E521",
+    "type": "donate"
   }
 ]

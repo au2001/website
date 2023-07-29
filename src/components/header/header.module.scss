@@ -1,1 +1,25 @@
-// TODO
+.header {
+  margin: 1.875em 3.125em 0 3.125em;
+
+  .links {
+    display: flex;
+    column-gap: 3.125em;
+    list-style-type: none;
+
+    > :last-child {
+      align-self: flex-end;
+      margin-left: auto;
+    }
+
+    .active {
+      text-decoration: underline;
+    }
+
+    .logo {
+      max-width: 1.25em;
+      max-height: 1.25em;
+      vertical-align: -0.25em;
+      margin-right: 0.3125em;
+    }
+  }
+}

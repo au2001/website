@@ -105,7 +105,7 @@ export default function TimelineRow({
             @keyframes ${activeKeyframes} {
               0%                     { width: 0em; }
               ${activeOffset * 100}% { width: 0em; }
-              100%                   { right: 0.25em; }
+              100%                   { right: .25em; }
             }
           `}</style>
             <div
