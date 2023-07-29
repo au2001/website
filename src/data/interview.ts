@@ -35,7 +35,7 @@ const interview = [
       "What did you study in college? How did you acquire your knowledge?",
     answer:
       '\
-			I joined Efrei Paris, engineering school of digital technologies, in 2018. It has consistently been <a href="https://eng.efrei.fr/the-school/rankings/" target="_blank" rel="nofollow external">ranked in the top computer science schools in France</a>.<br/>\
+			I joined Efrei Paris, engineering school of digital technologies, in 2018. It has consistently been <a href="https://eng.efrei.fr/the-school/rankings/" target="_blank" rel="nofollow external noreferrer noopener">ranked in the top computer science schools in France</a>.<br/>\
 			I majored in <i>Cloud Architecture</i>, minoring in <i>DevOps</i> and <i>Cybersecurity</i>.<br/>\
 			The vast majority of my know-how is self-taught though. Because I was already proficient before entering college, I used those 5 years to build professional experience and to learn the codes of the professional world.\
 		',

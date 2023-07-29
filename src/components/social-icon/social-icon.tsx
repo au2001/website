@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Clipboard from "@/components/clipboard/clipboard";
 
 import socialsData from "@/data/socials.json";
@@ -19,9 +20,13 @@ export default function SocialIcon({
   return (
     <li>
       {social.link !== undefined ? (
-        <a href={social.link} target="_blank" rel="nofollow external">
+        <Link
+          href={social.link}
+          target="_blank"
+          rel="nofollow external noreferrer noopener"
+        >
           {img}
-        </a>
+        </Link>
       ) : (
         <Clipboard
           text={social.account}
