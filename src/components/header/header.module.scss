@@ -1,3 +1,5 @@
+@import "@/lib/breakpoints";
+
 .header {
   margin: 1.875em 3.125em 0 3.125em;
 
@@ -9,6 +11,10 @@
     > :last-child {
       align-self: flex-end;
       margin-left: auto;
+
+      @include mobile {
+        display: none;
+      }
     }
 
     .active {
@@ -20,6 +26,11 @@
       max-height: 1.25em;
       vertical-align: -0.25em;
       margin-right: 0.3125em;
+    }
+
+    @include mobile {
+      column-gap: 0;
+      justify-content: space-between;
     }
   }
 }

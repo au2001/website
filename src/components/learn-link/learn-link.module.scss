@@ -1,0 +1,57 @@
+@import "@/lib/colors";
+@import "@/lib/breakpoints";
+
+.container {
+  display: flex;
+  width: 90%;
+  margin: 0 auto;
+
+  transition: transform 0.2s ease-in-out;
+
+  > .preview {
+    flex: 3;
+
+    > h2 {
+      color: $SECONDARY;
+    }
+
+    > p {
+      margin: 1em 3.125em;
+      line-height: 1.5em;
+
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      @supports (-webkit-line-clamp: 3) {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+  }
+
+  > .stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    row-gap: 0.625em;
+
+    flex: 1;
+
+    > .tags {
+      display: flex;
+      column-gap: 0.625em;
+    }
+  }
+
+  @include hover {
+    transform: scale(1.01) translateY(-0.3125em);
+  }
+
+  & + .container {
+    margin-top: 6.25em;
+  }
+}

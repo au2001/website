@@ -1,0 +1,49 @@
+@import "@/lib/colors";
+
+.spacer {
+  margin-bottom: 12.5em;
+}
+
+.stats {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 1.25em;
+
+  > p {
+    display: flex;
+    column-gap: 0.625em;
+    margin-top: 0.625em;
+  }
+}
+
+.article {
+  width: 90%;
+  margin: 0 auto;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  ul {
+    &:not(li > *) {
+      margin: 0.625em 0;
+    }
+  }
+
+  p:not(li > p) {
+    text-indent: 3em;
+  }
+
+  blockquote {
+    padding-left: 1em;
+
+    border-left: 0.1875em solid $PRIMARY;
+
+    p:not(li > p) {
+      text-indent: 1.8125em;
+    }
+  }
+}

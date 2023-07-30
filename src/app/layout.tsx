@@ -4,7 +4,7 @@ import { Inter } from "next/font/google";
 
 import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "600", "700"] });
 
 export const metadata: Metadata = {
   title: "Aurélien Garnier",

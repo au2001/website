@@ -5,8 +5,8 @@ date: 2023-07-30T11:24:06.504Z
 last-edited: 2023-07-30T11:24:06.510Z
 minutes-read: 1
 tags:
-  - test
-  - lorem-ipsum
+  - Test
+  - LoremIpsum
 preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Tristique sollicitudin
   nibh sit amet. Mattis molestie a iaculis at erat. Vel pretium lectus quam id
