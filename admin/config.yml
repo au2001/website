@@ -15,6 +15,7 @@ collections:
     folder: src/data/portfolio
     create: true
     identifier_field: slug
+    preview_path: portfolio/{{slug}}
     fields:
       - label: Title
         name: title
@@ -62,6 +63,7 @@ collections:
     folder: src/data/learn
     create: true
     identifier_field: slug
+    preview_path: learn/{{slug}}
     fields:
       - label: Title
         name: title
