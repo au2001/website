@@ -1,0 +1,102 @@
+backend:
+  name: github
+  repo: arl-sh/website
+  branch: main
+  base_url: https://sveltia-cms-auth.aurelien.garnier.dev
+
+site_url: https://aurelien.garnier.dev
+publish_mode: editorial_workflow
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: portfolio
+    label: Portfolio
+    folder: src/data/portfolio
+    create: true
+    identifier_field: slug
+    preview_path: portfolio/{{slug}}
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Slug
+        name: slug
+        widget: string
+
+      - label: Date
+        name: date
+        widget: datetime
+
+      - label: Last Edited
+        name: last-edited
+        widget: datetime
+
+      - label: Minutes Read
+        name: minutes-read
+        widget: number
+
+      - label: Tags
+        name: tags
+        widget: list
+        label_singular: Tag
+        field:
+          name: name
+          widget: string
+
+      - label: Image
+        name: image
+        widget: image
+        allow_multiple: false
+
+      - label: Preview
+        name: preview
+        widget: text
+
+      - label: Body
+        name: body
+        widget: markdown
+
+  - name: learn
+    label: Learn
+    folder: src/data/learn
+    create: true
+    identifier_field: slug
+    preview_path: learn/{{slug}}
+    fields:
+      - label: Title
+        name: title
+        widget: string
+
+      - label: Slug
+        name: slug
+        widget: string
+
+      - label: Date
+        name: date
+        widget: datetime
+
+      - label: Last Edited
+        name: last-edited
+        widget: datetime
+
+      - label: Minutes Read
+        name: minutes-read
+        widget: number
+
+      - label: Tags
+        name: tags
+        widget: list
+        label_singular: Tag
+        field:
+          name: name
+          widget: string
+
+      - label: Preview
+        name: preview
+        widget: text
+
+      - label: Body
+        name: body
+        widget: markdown
