@@ -2,6 +2,7 @@ backend:
   name: github
   repo: arl-sh/website
   branch: main
+  base_url: https://sveltia-cms-auth.aurelien.garnier.dev
 
 site_url: https://aurelien.garnier.dev
 publish_mode: editorial_workflow
