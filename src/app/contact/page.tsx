@@ -4,21 +4,21 @@ import ContactSection from "@/components/contact-section/contact-section";
 import Footer from "@/components/footer/footer";
 
 import styles from "./page.module.scss";
+import Title from "@/components/title/title";
 
-export default function Home() {
+export default function Contact() {
   return (
     <>
       <Background />
 
       <Header />
 
-      <div className={styles.heading}>
-        <h1 className={styles.preHeading}>Hi! I am</h1>
-
-        <h1 className={styles.mainHeading}>Aurélien Garnier</h1>
-
-        <p className={styles.subHeading}>That’s /ɔ.ʁe.ljɛ̃/</p>
-      </div>
+      <Title
+        pretitle="Hi! I am"
+        title="Aurélien Garnier"
+        subtitle="That’s /ɔ.ʁe.ljɛ̃/"
+        center
+      />
 
       <div className={styles.spacer}></div>
 
