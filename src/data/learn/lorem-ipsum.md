@@ -24,7 +24,6 @@ preview: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
 ```typescript
 var code: string = "block";
-
 ```
 
 Ut lectus arcu bibendum at varius vel. Elementum tempus egestas sed sed risus pretium quam vulputate dignissim. Eu sem integer vitae justo eget magna fermentum. Massa sapien faucibus et molestie ac feugiat. Id diam maecenas ultricies mi eget mauris pharetra et. Tempor nec feugiat nisl pretium fusce id velit ut. Pharetra convallis posuere morbi leo urna molestie at elementum. Suspendisse ultrices gravida dictum fusce. Nunc sed augue lacus viverra. Nibh mauris cursus mattis molestie a iaculis at. A scelerisque purus semper eget duis at tellus at. Nisl pretium fusce id velit ut. Sit amet purus gravida quis blandit. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum.
@@ -57,4 +56,4 @@ Blandit turpis cursus in hac habitasse. Senectus et netus et malesuada fames. Co
 2. Turpis egestas pretium aenean pharetra magna ac placerat vestibulum.
 3. Ornare arcu odio ut sem nulla pharetra diam sit amet.
 
-Pulvinar neque laoreet suspendisse interdum consectetur libero. Ultrices eros in cursus turpis massa tincidunt dui. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Bibendum enim facilisis gravida neque convallis. Tempor orci eu lobortis elementum nibh tellus molestie nunc. Elit eget gravida cum sociis natoque penatibus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Odio ut sem nulla pharetra diam sit amet. Pulvinar mattis nunc sed blandit libero.
+Pulvinar neque laoreet suspendisse interdum consectetur libero. Ultrices eros in cursus turpis massa tincidunt dui. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Bibendum enim facilisis gravida neque convallis. Tempor orci eu lobortis elementum nibh tellus molestie nunc. Elit eget gravida cum sociis natoque penatibus. Nulla malesuada pellentesque elit eget gravida cum sociis natoque penatibus. Odio ut sem nulla pharetra diam sit amet. Pulvinar mattis nunc sed blandit libero[.](https://youtu.be/dQw4w9WgXcQ)
