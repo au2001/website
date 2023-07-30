@@ -1,5 +1,6 @@
 import Background from "@/components/background/background";
 import Header from "@/components/header/header";
+import Title from "@/components/title/title";
 import Timeline from "@/components/timeline/timeline";
 import Clients from "@/components/clients/clients";
 import Interview from "@/components/interview/interview";
@@ -16,13 +17,12 @@ export default function Home() {
       <div className={styles.fold}>
         <Header />
 
-        <div className={styles.heading}>
-          <h1 className={styles.preHeading}>Hi! I am</h1>
-
-          <h1 className={styles.mainHeading}>Aurélien Garnier</h1>
-
-          <p className={styles.subHeading}>That’s /ɔ.ʁe.ljɛ̃/</p>
-        </div>
+        <Title
+          pretitle="Hi! I am"
+          title="Aurélien Garnier"
+          subtitle="That’s /ɔ.ʁe.ljɛ̃/"
+          center
+        />
 
         <Timeline />
 

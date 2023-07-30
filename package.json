@@ -26,7 +26,9 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.4.6",
     "@svgr/webpack": "^8.0.1",
+    "@types/webpack-env": "^1.18.1",
     "eslint-config-prettier": "^8.8.0",
+    "frontmatter-markdown-loader": "^3.7.0",
     "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
