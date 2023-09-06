@@ -1,9 +1,9 @@
 1:HL["/_next/static/media/2aaf0723e720e8b9-s.p.woff2",{"as":"font","type":"font/woff2"}]
 2:HL["/_next/static/css/3fab17548d944944.css",{"as":"style"}]
-0:["UYpJ4HDND-l1z2m3zhzRv",[[["",{"children":["learn",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3fab17548d944944.css","precedence":"next"}]],["$L4",["$","meta",null,{"name":"next-size-adjust"}]]]]]]
+0:["onKGNDije6hwJZgvd2ks6",[[["",{"children":["learn",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L3",[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/3fab17548d944944.css","precedence":"next"}]],["$L4",["$","meta",null,{"name":"next-size-adjust"}]]]]]]
 5:HL["/_next/static/css/e1f90608f4b2aef6.css",{"as":"style"}]
-6:I{"id":"3211","chunks":["272:static/chunks/webpack-8a79d28fc39dc2fb.js","253:static/chunks/bce60fc1-8785d1c1ee64d3b8.js","769:static/chunks/769-445b66e4951a1ad7.js"],"name":"","async":false}
-7:I{"id":"5767","chunks":["272:static/chunks/webpack-8a79d28fc39dc2fb.js","253:static/chunks/bce60fc1-8785d1c1ee64d3b8.js","769:static/chunks/769-445b66e4951a1ad7.js"],"name":"","async":false}
+6:I{"id":"3211","chunks":["272:static/chunks/webpack-ccf8c92099c2261b.js","253:static/chunks/bce60fc1-8785d1c1ee64d3b8.js","769:static/chunks/769-445b66e4951a1ad7.js"],"name":"","async":false}
+7:I{"id":"5767","chunks":["272:static/chunks/webpack-ccf8c92099c2261b.js","253:static/chunks/bce60fc1-8785d1c1ee64d3b8.js","769:static/chunks/769-445b66e4951a1ad7.js"],"name":"","async":false}
 8:I{"id":"1964","chunks":["934:static/chunks/934-f09f23f99068391b.js","192:static/chunks/app/learn/[slug]/page-af72739640adf960.js"],"name":"","async":false}
 9:I{"id":"7477","chunks":["934:static/chunks/934-f09f23f99068391b.js","192:static/chunks/app/learn/[slug]/page-af72739640adf960.js"],"name":"","async":false}
 4:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Aurélien Garnier"}],["$","meta","2",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
