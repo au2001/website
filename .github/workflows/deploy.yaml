@@ -5,6 +5,7 @@ on:
     branches:
       - main
   workflow_call:
+  workflow_dispatch:
 
 env:
   DOMAIN: aurelien.garnier.dev
@@ -26,6 +27,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      - name: Generate background SVG
+        run: npm run generate-background
 
       - name: Build project
         run: npm run build
