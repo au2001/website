@@ -11,8 +11,8 @@ export default function Timeline() {
   const years = React.useMemo(() => {
     const minDate = Math.min(
       ...timelineData.map((item) =>
-        Math.min(...item.timeline.map(({ from }) => new Date(from).getTime()))
-      )
+        Math.min(...item.timeline.map(({ from }) => new Date(from).getTime())),
+      ),
     );
 
     const count = 4;
@@ -22,7 +22,7 @@ export default function Timeline() {
     maxYear -= (maxYear - minYear) % (count - 1);
 
     return [...new Array(count)].map(
-      (_, i) => minYear + ((maxYear - minYear) / (count - 1)) * i
+      (_, i) => minYear + ((maxYear - minYear) / (count - 1)) * i,
     );
   }, [now]);
 

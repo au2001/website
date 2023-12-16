@@ -21,7 +21,7 @@ export default function TimelineRow({
         hoursPerDay,
         active: to === "now",
       })),
-    [item.timeline, now]
+    [item.timeline, now],
   );
 
   const hours = React.useMemo(
@@ -31,16 +31,16 @@ export default function TimelineRow({
           .map(
             ({ from, to, hoursPerDay }) =>
               ((to.getTime() - from.getTime()) / (24 * 60 * 60 * 1000)) *
-              hoursPerDay
+              hoursPerDay,
           )
-          .reduce((a, b) => a + b)
+          .reduce((a, b) => a + b),
       ),
-    [timeline]
+    [timeline],
   );
 
   const roundedHours = React.useMemo(
     () => hours - (hours % Math.pow(10, Math.floor(Math.log10(hours)))),
-    [hours]
+    [hours],
   );
 
   function getDateOffset(date: Date) {

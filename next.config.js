@@ -14,7 +14,7 @@ const nextConfig = {
         test: /\.md$/,
         loader: "frontmatter-markdown-loader",
         options: { mode: ["react-component"] },
-      }
+      },
     );
     return config;
   },
