@@ -14,7 +14,9 @@ export default function ContactSection({
 }) {
   return (
     <>
-      <h1 className={styles.heading}>{title}</h1>
+      <h1 className={styles.heading} id={type}>
+        {title}
+      </h1>
       <p className={styles.description}>{description}</p>
 
       <ul className={styles.socials}>
