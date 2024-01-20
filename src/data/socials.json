@@ -4,7 +4,7 @@
     "logo": "/images/socials/LinkedIn.svg",
     "account": "aurelien-garnier",
     "prefix": "in/",
-    "link": "https://linkedin.com/in/aurelien-garnier",
+    "link": "https://linkedin.com/in/aurelien-garnier/",
     "type": "work",
     "footer": true
   },
@@ -37,8 +37,8 @@
   {
     "name": "Matrix",
     "logo": "/images/socials/Matrix.svg",
-    "account": "@au2001:matrix.org",
-    "link": "https://matrix.to/#/@au2001:matrix.org",
+    "account": "@aurelien:garnier.dev",
+    "link": "https://matrix.to/#/@aurelien:garnier.dev",
     "type": "contact"
   },
   {
