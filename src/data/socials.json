@@ -50,17 +50,25 @@
     "type": "contact"
   },
   {
-    "name": "Keybase",
-    "logo": "/images/socials/Keybase.svg",
-    "account": "au2001",
+    "name": "Twitter",
+    "logo": "/images/socials/Twitter.svg",
+    "account": "au2001sfg",
     "prefix": "@",
-    "link": "https://keybase.io/au2001",
+    "link": "https://twitter.com/au2001sfg",
     "type": "contact"
   },
   {
     "name": "Discord",
     "logo": "/images/socials/Discord.svg",
     "account": "au2001",
+    "type": "contact"
+  },
+  {
+    "name": "Keybase",
+    "logo": "/images/socials/Keybase.svg",
+    "account": "au2001",
+    "prefix": "@",
+    "link": "https://keybase.io/au2001",
     "type": "contact"
   },
 
@@ -70,14 +78,6 @@
     "account": "au2001",
     "prefix": "u/",
     "link": "https://reddit.com/u/au2001",
-    "type": "social"
-  },
-  {
-    "name": "Twitter",
-    "logo": "/images/socials/Twitter.svg",
-    "account": "au2001sfg",
-    "prefix": "@",
-    "link": "https://twitter.com/au2001sfg",
     "type": "social"
   },
   {
