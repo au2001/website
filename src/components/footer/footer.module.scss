@@ -1,13 +1,53 @@
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
 .footer {
-  width: 90%;
-  margin: 0 auto;
+  border-top: 1px solid $RULE;
 
-  overflow: auto;
+  &.expanded {
+    padding-top: 7rem;
+    background-color: $DEEP;
 
-  > p {
-    margin-bottom: 3.125em;
-    text-align: center;
+    @include mobile {
+      padding-top: 3rem;
+    }
+  }
+}
 
-    font-size: 0.75em;
+.bar {
+  @include container;
+  padding: 2.5rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.5rem 2rem;
+
+  @include mono;
+  color: $MUTED;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+
+  a {
+    @include hover {
+      color: $HIGHLIGHT;
+    }
+  }
+
+  .expanded & {
+    margin-top: 4.5rem;
+    padding: 1.5rem 0 3rem;
+    border-top: 1px solid $RULE;
+
+    @include mobile {
+      margin-top: 2.5rem;
+      padding: 1.25rem 0 2rem;
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    font-size: 0.75rem;
   }
 }

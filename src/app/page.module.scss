@@ -1,10 +1,9 @@
-@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
 
-.fold {
-  overflow: auto;
-  min-height: 100vh;
-}
+.main {
+  padding-bottom: 7rem;
 
-.spacer {
-  margin-bottom: 12.5em;
+  @include mobile {
+    padding-bottom: 4rem;
+  }
 }

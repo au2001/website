@@ -18,6 +18,22 @@ const PRECISION = 0;
 // Path where to save the resulting SVG file
 const PATH = "public/images/background.svg";
 
+// Colors of the network and of the route highlighted through it
+const COLOR = "#cde7f6";
+const ACCENT = "#f9d0cd";
+
+// The home page highlights a route through the network, next to the hero text
+// It goes from ROUTE_FROM to ROUTE_TO, through dots at most ROUTE_WIDTH / 2 away
+// The page centers the SVG, so these land to the right of the centered content
+// The blog's featured post card is also centered on this route, in its styles
+const ROUTE_FROM = { x: 1633, y: 557 };
+const ROUTE_TO = { x: 1896, y: 237 };
+const ROUTE_WIDTH = SQUARE_UNIT * 2;
+
+// Path where to save the route, kept separate so the page can hide it
+const ROUTE_PATH = "public/images/background-route.svg";
+
+type Point = { x: number; y: number };
 type Dot = { id: number; x: number; y: number; size: number; lines: Line[] };
 type Line = { id: number; from: Dot; to: Dot; ratio: number };
 
@@ -104,12 +120,87 @@ for (const dot of dots) {
 
 // TODO: If some dots have no line left, rebalance
 
+function distance(a: Point, b: Point) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
+
+// Distance from a point to the segment going from ROUTE_FROM to ROUTE_TO
+function distanceToRoute(point: Point) {
+  const dx = ROUTE_TO.x - ROUTE_FROM.x;
+  const dy = ROUTE_TO.y - ROUTE_FROM.y;
+  const t =
+    ((point.x - ROUTE_FROM.x) * dx + (point.y - ROUTE_FROM.y) * dy) /
+    (dx * dx + dy * dy);
+  const clamped = Math.max(0, Math.min(1, t));
+  return distance(point, {
+    x: ROUTE_FROM.x + clamped * dx,
+    y: ROUTE_FROM.y + clamped * dy,
+  });
+}
+
+function isOnRoute(dot: Dot) {
+  return distanceToRoute(dot) <= ROUTE_WIDTH / 2;
+}
+
+// Shortest path along visible lines from a dot to the dot closest to ROUTE_TO
+// Lines cost their squared length, which favors routes with more, shorter hops
+function findRoute(start: Dot) {
+  const costs = new Map<Dot, number>([[start, 0]]);
+  const previous = new Map<Dot, Dot>();
+  const visited = new Set<Dot>();
+  const queue = [start];
+
+  while (queue.length > 0) {
+    queue.sort((a, b) => costs.get(a)! - costs.get(b)!);
+    const dot = queue.shift()!;
+    if (visited.has(dot)) continue;
+    visited.add(dot);
+
+    for (const line of dot.lines) {
+      if (hidden.has(line.id)) continue;
+
+      const next = line.from === dot ? line.to : line.from;
+      if (!isOnRoute(next)) continue;
+
+      const cost = costs.get(dot)! + Math.pow(distance(dot, next), 2);
+      if (cost >= (costs.get(next) ?? Infinity)) continue;
+
+      costs.set(next, cost);
+      previous.set(next, dot);
+      queue.push(next);
+    }
+  }
+
+  let end = start;
+  for (const dot of Array.from(visited)) {
+    if (distance(dot, ROUTE_TO) < distance(end, ROUTE_TO)) end = dot;
+  }
+
+  const route = [end];
+  while (route[0] !== start) route.unshift(previous.get(route[0])!);
+  return route;
+}
+
+// Try the few dots closest to ROUTE_FROM, and keep the route going the furthest
+const route = dots
+  .filter(isOnRoute)
+  .sort((a, b) => distance(a, ROUTE_FROM) - distance(b, ROUTE_FROM))
+  .slice(0, 3)
+  .map(findRoute)
+  .reduce((best, candidate) =>
+    distance(candidate[candidate.length - 1], ROUTE_TO) <
+    distance(best[best.length - 1], ROUTE_TO)
+      ? candidate
+      : best,
+  );
+
 const svg = xml
   .create()
   .ele("http://www.w3.org/2000/svg", "svg")
   .att("width", WIDTH.toFixed())
   .att("height", HEIGHT.toFixed())
-  .att("fill", "#fff");
+  .att("fill", COLOR)
+  .att("fill-opacity", "0.28");
 
 for (const dot of dots) {
   // Ignore fully out-of-screen dots
@@ -145,7 +236,43 @@ for (const line of lines) {
   linepaths.push(`M${x1} ${y1}L${x2} ${y2}`);
 }
 
-svg.ele("path").att("stroke", "#fff").att("d", linepaths.join(""));
+svg
+  .ele("path")
+  .att("stroke", COLOR)
+  .att("stroke-opacity", "0.14")
+  .att("d", linepaths.join(""));
 
 const text = svg.end({ headless: true });
 fs.writeFileSync(path.join(__dirname, "..", PATH), text);
+
+const routeSvg = xml
+  .create()
+  .ele("http://www.w3.org/2000/svg", "svg")
+  .att("width", WIDTH.toFixed())
+  .att("height", HEIGHT.toFixed())
+  .att("fill", ACCENT);
+
+const routepath = route.map((dot, i) => {
+  const x = dot.x.toFixed(PRECISION);
+  const y = dot.y.toFixed(PRECISION);
+  return `${i === 0 ? "M" : "L"}${x} ${y}`;
+});
+
+routeSvg
+  .ele("path")
+  .att("fill", "none")
+  .att("stroke", ACCENT)
+  .att("stroke-opacity", "0.85")
+  .att("stroke-width", "1.5")
+  .att("d", routepath.join(""));
+
+for (const dot of route) {
+  routeSvg
+    .ele("circle")
+    .att("cx", dot.x.toFixed(PRECISION))
+    .att("cy", dot.y.toFixed(PRECISION))
+    .att("r", "5.5");
+}
+
+const routeText = routeSvg.end({ headless: true });
+fs.writeFileSync(path.join(__dirname, "..", ROUTE_PATH), routeText);

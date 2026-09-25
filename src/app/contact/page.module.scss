@@ -1,5 +1,24 @@
 @use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
 
-.spacer {
-  margin-bottom: 6.25em;
+.main {
+  padding-bottom: 3.5rem;
+
+  @include mobile {
+    padding-bottom: 2rem;
+  }
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+
+  color: $MUTED;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  @include mobile {
+    margin-top: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
 }

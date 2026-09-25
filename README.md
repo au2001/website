@@ -40,7 +40,8 @@ The most up-to-date deployed version can be obtained on the `gh-pages` branch.
 ## Blog
 
 Some dynamic content is present on the website, even though it is satically generated.\
-For example, the `Learn` page shows articles which can be created without manually editing the source code.
+For example, the [Blog](https://aurelien.garnier.dev/blog) shows articles which can be created without manually editing the source code.\
+They are saved as Markdown files in [`src/data/learn`](./src/data/learn).
 
 This is achieved with [Sveltia CMS](https://github.com/sveltia/sveltia-cms), a Git-based headless CMS.\
 Every time a change is made to some content, the update is pushed to this repository.\
@@ -58,7 +59,8 @@ My website's background is like a box of chocolates. You never know what you're 
 I wanted to create a [tsParticles](https://particles.js.org/)-like effect for the background, as reference to a computer network.\
 But I also aim at making the website the most compatible when disabling client-side JavaScript[^1], mostly for privacy reasons.\
 So, as a compromise, a [static SVG](./public/images/background.svg) is [generated procedurally](./scripts/generate-background.tsx) at build time.\
-The algorithm I wrote makes sure that it is tileable, so that it can seamlessly cover bigger screens.
+The algorithm I wrote makes sure that it is tileable, so that it can seamlessly cover bigger screens.\
+It also highlights a route through the network next to the home page's title, in a [separate SVG](./public/images/background-route.svg) so that it can be hidden on smaller screens.
 
 As a result, all visitors see the same background every time they visit the website.\
 So, as not to bore you if you like visiting it very often or if you set it as desktop background, it is periodically regenerated.\

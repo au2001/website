@@ -1,46 +1,55 @@
 @use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
+.section {
+  @include container;
+  padding: 3.5rem 0;
+
+  border-top: 1px solid $RULE;
+
+  @include mobile {
+    padding: 2.5rem 0;
+  }
+}
 
 .heading {
-  width: 80%;
-  text-align: center;
-  margin: 0 auto;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  font-weight: 700;
 
-  color: $SECONDARY;
-
-  font-size: 1.5em;
-  font-weight: normal;
+  @include mobile {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
 }
 
 .description {
-  width: 80%;
-  text-align: center;
-  margin: 0.3125em auto 0 auto;
+  max-width: 45rem;
+  margin-top: 0.75rem;
+
+  color: $MUTED;
+  font-size: 1.0625rem;
+  line-height: 1.625rem;
+  text-wrap: pretty;
+
+  @include mobile {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .socials {
-  display: flex;
-  width: 90%;
-  margin: 1em auto -1em auto;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
 
-  padding: 0;
-  list-style-type: none;
+  list-style: none;
 
-  > li {
-    margin: 1em;
-
-    > a {
-      display: inline-block;
-
-      cursor: pointer;
-
-      > img {
-        max-width: 1.875em;
-        max-height: 1.875em;
-        vertical-align: middle;
-      }
-    }
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.625rem;
+    margin-top: 1.5rem;
   }
 }

@@ -1,0 +1,39 @@
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
+.header {
+  @include container;
+  padding: 5.5rem 0 3.5rem;
+
+  @include mobile {
+    padding: 3rem 0 2rem;
+  }
+}
+
+.pretitle {
+  @include mono;
+  color: $MUTED;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+
+  @include mobile {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+.title {
+  margin-top: 0.75rem;
+
+  color: $SECONDARY;
+  font-size: clamp(2.5rem, 5.55vw, 5rem);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+
+  @include mobile {
+    margin-top: 0.5rem;
+  }
+}

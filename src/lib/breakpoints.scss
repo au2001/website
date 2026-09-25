@@ -10,6 +10,12 @@
   }
 }
 
+@mixin wide {
+  @media screen and (min-width: 1280px) {
+    @content;
+  }
+}
+
 @mixin hover {
   @media (hover: hover) {
     &:hover {

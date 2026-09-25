@@ -1,6 +1,7 @@
-import Background from "@/components/background/background";
+import Link from "next/link";
+
 import Header from "@/components/header/header";
-import Title from "@/components/title/title";
+import PageHeader from "@/components/page-header/page-header";
 import Footer from "@/components/footer/footer";
 
 import styles from "./not-found.module.scss";
@@ -8,17 +9,18 @@ import styles from "./not-found.module.scss";
 export default function NotFound() {
   return (
     <>
-      <Background />
+      <Header bordered />
 
-      <Header />
-
-      <Title
-        title="404 - Page Not Found!"
-        subtitle="Sorry, we couldn’t find what you were looking for."
-        center
-      />
-
-      <div className={styles.spacer}></div>
+      <main>
+        <PageHeader pretitle="404" title="Page not found">
+          <p className={styles.description}>
+            Sorry, we couldn’t find what you were looking for.
+          </p>
+          <Link href="/" className={styles.back}>
+            ← Back to the home page
+          </Link>
+        </PageHeader>
+      </main>
 
       <Footer />
     </>

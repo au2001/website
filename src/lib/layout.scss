@@ -1,0 +1,21 @@
+@use "breakpoints" as *;
+
+// Horizontal space around the content, 120px on a 1440px wide screen
+$GUTTER: clamp(3rem, 8.33vw, 7.5rem);
+$GUTTER_MOBILE: 1.5rem;
+
+// Centers an element in a column of at most 1200px
+@mixin container {
+  width: calc(100% - 2 * #{$GUTTER});
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include mobile {
+    width: calc(100% - 2 * #{$GUTTER_MOBILE});
+  }
+}
+
+@mixin mono {
+  font-family: var(--font-mono), ui-monospace, monospace;
+}

@@ -1,4 +1,4 @@
-import SocialIcon from "@/components/social-icon/social-icon";
+import SocialCard from "@/components/social-card/social-card";
 import socialsData from "@/data/socials.json";
 
 import styles from "./contact-section.module.scss";
@@ -13,19 +13,25 @@ export default function ContactSection({
   type: string;
 }) {
   return (
-    <>
-      <h1 className={styles.heading} id={type}>
+    <section
+      className={styles.section}
+      id={type}
+      aria-labelledby={`${type}-title`}
+    >
+      <h2 className={styles.heading} id={`${type}-title`}>
         {title}
-      </h1>
+      </h2>
       <p className={styles.description}>{description}</p>
 
       <ul className={styles.socials}>
         {socialsData
           .filter((social) => social.type === type)
-          .map((social, i) => (
-            <SocialIcon key={i} social={social} />
+          .map((social) => (
+            <li key={social.name}>
+              <SocialCard social={social} />
+            </li>
           ))}
       </ul>
-    </>
+    </section>
   );
 }

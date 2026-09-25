@@ -1,0 +1,27 @@
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+
+  list-style: none;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  height: 1.75rem;
+  padding: 0 0.625rem;
+
+  color: $BACKGROUND;
+  background-color: $TAG;
+  border-radius: 0.3125rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  @include hover {
+    background-color: $HIGHLIGHT;
+  }
+}

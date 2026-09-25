@@ -1,0 +1,133 @@
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
+.intro {
+  @include container;
+  min-height: 44rem;
+  padding: 7rem 0 3rem;
+
+  @include mobile {
+    min-height: 0;
+    padding: 2.5rem 0;
+  }
+}
+
+.pretitle {
+  @include mono;
+  color: $MUTED;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+
+  @include mobile {
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+  }
+}
+
+.title {
+  margin-top: 0.75rem;
+
+  color: $SECONDARY;
+  font-size: clamp(2.75rem, 8.33vw, 7.5rem);
+  line-height: 1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+
+  @include mobile {
+    margin-top: 0.5rem;
+    line-height: 1.05;
+  }
+}
+
+.subtitle {
+  margin-top: 0.75rem;
+
+  color: $MUTED;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  @include mobile {
+    margin-top: 0.625rem;
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+}
+
+.headline {
+  max-width: 51.25rem;
+  margin-top: 2rem;
+
+  font-size: 1.875rem;
+  line-height: 2.625rem;
+  font-weight: 300;
+  text-wrap: pretty;
+
+  @include mobile {
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+    line-height: 1.875rem;
+  }
+}
+
+.focus {
+  margin-top: 1.75rem;
+
+  @include mono;
+  color: $MUTED;
+  font-size: 0.9375rem;
+  line-height: 1.375rem;
+
+  @include mobile {
+    margin-top: 1.25rem;
+    font-size: 0.8125rem;
+    line-height: 1.25rem;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 3.25rem;
+    padding: 0 1.625rem;
+
+    border-radius: 0.375rem;
+    font-size: 1.0625rem;
+    font-weight: 500;
+  }
+
+  @include mobile {
+    flex-direction: column;
+    gap: 0.625rem;
+    margin-top: 1.75rem;
+
+    a {
+      height: 3rem;
+    }
+  }
+}
+
+.primary {
+  color: $BACKGROUND;
+  background-color: $SECONDARY;
+
+  @include hover {
+    background-color: $HIGHLIGHT;
+  }
+}
+
+.secondary {
+  border: 1px solid $MUTED;
+
+  @include hover {
+    color: $HIGHLIGHT;
+    border-color: $HIGHLIGHT;
+  }
+}

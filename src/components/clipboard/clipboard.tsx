@@ -5,8 +5,13 @@ import React from "react";
 export default function Clipboard({
   text,
   message,
+  className,
   children,
-}: React.PropsWithChildren<{ text: string; message?: string }>) {
+}: React.PropsWithChildren<{
+  text: string;
+  message?: string;
+  className?: string;
+}>) {
   function onClick(e: React.MouseEvent) {
     e.preventDefault();
 
@@ -25,5 +30,9 @@ export default function Clipboard({
     if (message !== undefined) alert(message);
   }
 
-  return <a onClick={onClick}>{children}</a>;
+  return (
+    <button type="button" onClick={onClick} className={className}>
+      {children}
+    </button>
+  );
 }

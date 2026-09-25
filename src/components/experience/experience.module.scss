@@ -1,0 +1,165 @@
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
+.experience {
+  @include container;
+  padding-top: 7.5rem;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 3fr);
+  column-gap: 1.5rem;
+
+  @include mobile {
+    display: block;
+    padding-top: 4rem;
+  }
+}
+
+.heading {
+  font-size: 2.75rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+
+  @include mobile {
+    margin-bottom: 1.5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.jobs {
+  list-style: none;
+}
+
+.job {
+  position: relative;
+  padding: 0 0 2.75rem 2.25rem;
+
+  // Node of the timeline
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0.25rem;
+    left: 0;
+    width: 13px;
+    height: 13px;
+
+    border: 2px solid $MUTED;
+    border-radius: 50%;
+  }
+
+  // Line down to the next node
+  &:not(:last-child)::after {
+    content: "";
+
+    position: absolute;
+    top: 1.625rem;
+    bottom: 0;
+    left: 6px;
+
+    border-left: 1px solid $RULE;
+  }
+
+  &.current::before {
+    border: none;
+    background-color: $SECONDARY;
+    box-shadow: 0 0 0 5px rgba(249, 208, 205, 0.18);
+  }
+
+  @include mobile {
+    padding: 0 0 2rem 1.75rem;
+
+    &::before {
+      top: 0.1875rem;
+    }
+
+    &:not(:last-child)::after {
+      top: 1.5rem;
+    }
+  }
+}
+
+.dates {
+  @include mono;
+  color: $MUTED;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  @include mobile {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+}
+
+.title {
+  margin-top: 0.5rem;
+
+  font-size: 1.625rem;
+  line-height: 2rem;
+  font-weight: 700;
+
+  @include mobile {
+    margin-top: 0.375rem;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+  }
+}
+
+.role {
+  color: $MUTED;
+  font-weight: 400;
+
+  @include mobile {
+    display: block;
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+
+    .separator {
+      display: none;
+    }
+  }
+}
+
+.description {
+  margin-top: 0.75rem;
+
+  font-size: 1rem;
+  line-height: 1.625rem;
+  text-wrap: pretty;
+
+  @include mobile {
+    margin-top: 0.625rem;
+    line-height: 1.5rem;
+  }
+}
+
+.stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+
+  list-style: none;
+  @include mono;
+  font-size: 0.8125rem;
+  line-height: 1.125rem;
+
+  li {
+    padding: 0.3125rem 0.75rem;
+    border: 1px solid $BORDER;
+    border-radius: 999px;
+  }
+
+  @include mobile {
+    gap: 0.375rem;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    line-height: 1rem;
+
+    li {
+      padding: 0.25rem 0.625rem;
+    }
+  }
+}

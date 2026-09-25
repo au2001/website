@@ -1,0 +1,255 @@
+@use "sass:color";
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
+.hours {
+  @include container;
+  padding-top: 7rem;
+
+  @include mobile {
+    padding-top: 4rem;
+  }
+}
+
+.heading {
+  font-size: 2.75rem;
+  line-height: 3.25rem;
+  font-weight: 700;
+
+  @include mobile {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+.description {
+  margin-top: 0.75rem;
+
+  color: $MUTED;
+  font-size: 1.0625rem;
+  line-height: 1.625rem;
+
+  @include mobile {
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+.chart {
+  // Widths of the columns around the bars
+  --name: 16.25rem;
+  --value: 13.75rem;
+
+  position: relative;
+  margin-top: 2.5rem;
+  padding-top: 3.75rem;
+
+  @media screen and (max-width: 1100px) {
+    --name: 13.5rem;
+    --value: 7.5rem;
+  }
+
+  @include mobile {
+    margin-top: 1.5rem;
+    padding-top: 0;
+  }
+}
+
+.axis {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: var(--name);
+  right: var(--value);
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.tick {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  @include mono;
+  color: $MUTED;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 1.75rem;
+    bottom: 0;
+    left: 50%;
+
+    border-left: 1px dashed $RULE;
+  }
+
+  &:first-child {
+    transform: none;
+
+    &::after {
+      left: 0;
+    }
+  }
+
+  &.now {
+    color: $SECONDARY;
+
+    &::after {
+      border-left: 1px solid color.change($SECONDARY, $alpha: 0.5);
+    }
+  }
+}
+
+.rows {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  min-height: 2.5rem;
+
+  @include mobile {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-areas:
+      "name value"
+      "track track";
+    row-gap: 0.375rem;
+    min-height: 0;
+
+    & + & {
+      margin-top: 0.625rem;
+    }
+  }
+}
+
+.name {
+  flex: 0 0 var(--name);
+  padding-right: 1rem;
+
+  font-size: 1.0625rem;
+  line-height: 1.5rem;
+
+  @include mobile {
+    grid-area: name;
+    padding-right: 0;
+
+    font-size: 0.9375rem;
+    line-height: 1.375rem;
+  }
+}
+
+.track {
+  position: relative;
+  flex: 1 1 auto;
+  align-self: stretch;
+  min-height: 2.5rem;
+
+  @include mobile {
+    grid-area: track;
+    height: 0.875rem;
+    min-height: 0;
+    border-bottom: 1px dashed $RULE;
+  }
+}
+
+.bar {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background-color: $SECONDARY;
+  border-radius: 999px;
+  opacity: 0.5;
+
+  &.active {
+    opacity: 1;
+  }
+}
+
+.node {
+  position: absolute;
+  top: 50%;
+  width: 0.625rem;
+  height: 0.625rem;
+  transform: translate(-50%, -50%);
+
+  background-color: $SECONDARY;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px $GLOW;
+}
+
+.value {
+  flex: 0 0 var(--value);
+  text-align: right;
+
+  @include mono;
+  font-size: 0.9375rem;
+  line-height: 1.5rem;
+
+  abbr {
+    text-decoration: none;
+  }
+
+  @include mobile {
+    grid-area: value;
+    font-size: 0.8125rem;
+  }
+}
+
+.range {
+  display: none;
+
+  @include mobile {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.625rem;
+
+    @include mono;
+    color: $MUTED;
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+
+    .now {
+      color: $SECONDARY;
+    }
+  }
+}
+
+// The bars grow along with time, as if the chart was being recorded
+@media (prefers-reduced-motion: no-preference) {
+  .bar {
+    animation-name: sweep;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+  }
+
+  .node {
+    animation: appear 0.3s ease-out both;
+  }
+}
+
+@keyframes sweep {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    clip-path: inset(0);
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+}

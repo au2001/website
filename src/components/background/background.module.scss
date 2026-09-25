@@ -1,13 +1,29 @@
+@use "@/lib/breakpoints" as *;
+
+$FADE: linear-gradient(to bottom, #000 60%, transparent);
+
 .background {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 50rem;
 
   z-index: -1;
 
-  opacity: 0.08;
   background-image: url(/images/background.svg);
   background-position: top center;
+  -webkit-mask-image: $FADE;
+  mask-image: $FADE;
+
+  // The route is drawn right of the centered content, which leaves it room
+  @include wide {
+    background-image:
+      url(/images/background-route.svg), url(/images/background.svg);
+    background-repeat: no-repeat, repeat;
+  }
+
+  @include mobile {
+    height: 40rem;
+  }
 }

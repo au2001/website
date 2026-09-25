@@ -1,0 +1,173 @@
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
+@use "@/lib/layout" as *;
+
+.filter {
+  margin-top: 2.25rem;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+
+    list-style: none;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    height: 2rem;
+    padding: 0 0.875rem;
+
+    border: 1px solid $BORDER;
+    border-radius: 0.3125rem;
+    font-size: 0.9375rem;
+    line-height: 1.25rem;
+
+    @include hover {
+      color: $HIGHLIGHT;
+      border-color: $MUTED;
+    }
+  }
+
+  .active {
+    color: $BACKGROUND;
+    background-color: $TAG;
+    border-color: $TAG;
+    font-weight: 700;
+
+    @include hover {
+      color: $BACKGROUND;
+      background-color: $HIGHLIGHT;
+      border-color: $HIGHLIGHT;
+    }
+  }
+
+  @include mobile {
+    margin-top: 1.5rem;
+  }
+}
+
+.posts {
+  @include container;
+  list-style: none;
+  border-bottom: 1px solid $RULE;
+}
+
+.post {
+  position: relative;
+  display: grid;
+  grid-template-columns: 13.75rem minmax(0, 1fr) 7.5rem;
+  padding: 2.25rem 0;
+
+  border-top: 1px solid $RULE;
+
+  @include hover {
+    .arrow {
+      color: $BACKGROUND;
+      background-color: $SECONDARY;
+      border-color: $SECONDARY;
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 0.625rem;
+    padding: 1.75rem 0;
+  }
+}
+
+.date {
+  margin-top: 0.375rem;
+
+  @include mono;
+  color: $MUTED;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+
+  @include mobile {
+    margin-top: 0;
+    font-size: 0.8125rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.625rem;
+
+  // Keep the tags clickable above the link covering the post
+  ul {
+    position: relative;
+    z-index: 1;
+    margin-top: 0.25rem;
+  }
+}
+
+.title {
+  font-size: 1.75rem;
+  line-height: 2.125rem;
+  font-weight: 700;
+
+  a::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+
+  @include mobile {
+    font-size: 1.375rem;
+    line-height: 1.75rem;
+  }
+}
+
+.preview {
+  max-width: 47.5rem;
+
+  color: $MUTED;
+  font-size: 1.0625rem;
+  line-height: 1.6875rem;
+  text-wrap: pretty;
+
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
+
+  @include mobile {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.arrow {
+  justify-self: end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+
+  color: $SECONDARY;
+  border: 1px solid $BORDER;
+  border-radius: 50%;
+  font-size: 1.25rem;
+
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.empty {
+  @include container;
+  padding: 2.25rem 0;
+
+  color: $MUTED;
+  border-top: 1px solid $RULE;
+}
