@@ -1,4 +1,4 @@
-@import "@/lib/colors";
+@use "@/lib/colors" as *;
 
 .fold {
   overflow: auto;

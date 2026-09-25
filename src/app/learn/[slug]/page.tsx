@@ -11,11 +11,12 @@ import learnPages from "@/data/learn";
 import styles from "./page.module.scss";
 import { formatDate } from "@/lib/utils";
 
-export default function LearnDetails({
-  params: { slug },
+export default async function LearnDetails({
+  params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
   const page = learnPages[slug];
 
   if (page === undefined) notFound();

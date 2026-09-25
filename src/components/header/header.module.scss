@@ -1,4 +1,4 @@
-@import "@/lib/breakpoints";
+@use "@/lib/breakpoints" as *;
 
 .header {
   margin: 1.875em 3.125em 0 3.125em;

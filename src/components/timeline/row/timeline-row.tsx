@@ -73,7 +73,7 @@ export default function TimelineRow({
           const keyframesName = `timeline-appear-${key}-${from.getTime()}`;
 
           return (
-            <>
+            <React.Fragment key={keyframesName}>
               <style>{`
               @keyframes ${keyframesName} {
                 0%              { right: ${(1 - left) * 100}%; }
@@ -95,7 +95,7 @@ export default function TimelineRow({
                     : `From ${formatDate(from)} to ${formatDate(to)}`
                 }
               ></div>
-            </>
+            </React.Fragment>
           );
         })}
 

@@ -1,5 +1,5 @@
-@import "@/lib/colors";
-@import "@/lib/breakpoints";
+@use "@/lib/colors" as *;
+@use "@/lib/breakpoints" as *;
 
 .timelineDesktop {
   position: relative;

@@ -4,19 +4,22 @@ const nextConfig = {
   images: {
     unoptimized: true, // https://nextjs.org/docs/messages/export-image-api
   },
-  webpack: (config) => {
-    config.module.rules.push(
-      {
-        test: /\.svg$/,
-        use: ["@svgr/webpack"],
+  turbopack: {
+    rules: {
+      "*.svg": {
+        loaders: ["@svgr/webpack"],
+        as: "*.js",
       },
-      {
-        test: /\.md$/,
-        loader: "frontmatter-markdown-loader",
-        options: { mode: ["react-component"] },
+      "*.md": {
+        loaders: [
+          {
+            loader: "frontmatter-markdown-loader",
+            options: { mode: ["react-component"] },
+          },
+        ],
+        as: "*.js",
       },
-    );
-    return config;
+    },
   },
 };
 
