@@ -15,4 +15,4 @@
 :HL["/images/socials/LinkedIn.svg","image"]
 :HL["/images/socials/GitHub.svg","image"]
 :HL["/images/socials/Email.svg","image"]
-0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"b-TOR1utLDUpnYbPRb8Hn"}
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"RJdZKK_ghlBrR7E1krHLg"}
