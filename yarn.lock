@@ -5710,7 +5710,7 @@ netlify-cms@^2.8.0:
     react "^16.8.4"
     react-dom "^16.8.4"
 
-next@^16.3.3:
+next@^16.3.6:
   version "16.3.6"
   resolved "https://registry.yarnpkg.com/next/-/next-16.3.6.tgz#29a6cecb103bd2642a0ce322e68ecdb38a0f0af5"
   integrity sha512-L+otWM/aQbYTx98aZhgEoMb4bZAXx1YVW4UMA/vuCyCoWG5HJyZUili8QAkqzrcC+5///tsz3s0M+SlyB5bLMw==
