@@ -30,7 +30,7 @@
     "frontmatter-markdown-loader": "^3.7.0",
     "gh-pages": "^6.0.0",
     "husky": "^8.0.3",
-    "lint-staged": "^15.0.2",
+    "lint-staged": "^15.5.2",
     "prettier": "^3.0.3",
     "random-js": "^2.1.0",
     "sass": "^1.69.5",
