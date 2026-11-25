@@ -34,7 +34,7 @@
     "prettier": "^3.0.3",
     "random-js": "^2.1.0",
     "sass": "^1.69.5",
-    "tsx": "^3.14.0",
+    "tsx": "^4.23.15",
     "typescript": "^5.2.2",
     "xmlbuilder2": "^4.0.3"
   }
